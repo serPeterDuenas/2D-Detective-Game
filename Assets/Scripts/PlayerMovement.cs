@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         inputHorizontal = Input.GetAxisRaw("Horizontal");
         inputVertical = Input.GetAxisRaw("Vertical");
 
-        Debug.Log(inputHorizontal);
+        
 
         // checks to see move direction and whether sprite is already facing in that direction, then flips
         if(inputHorizontal > 0 && facingLeft)
