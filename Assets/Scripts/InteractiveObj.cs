@@ -6,6 +6,7 @@ public class InteractiveObj : MonoBehaviour
 {
     [SerializeField] private string GiveMessage = "Hello";
     [SerializeField] private AudioClip soundClip;
+    [SerializeField] private bool isInDialogue = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,12 @@ public class InteractiveObj : MonoBehaviour
 
     public void ReturnMessage()
     {
-        Debug.Log(GiveMessage);
-        SoundManager.instance.PlaySound(soundClip);
+        if (!isInDialogue) 
+        {
+            isInDialogue = true;
+            Debug.Log(GiveMessage);
+            SoundManager.instance.PlaySound(soundClip);
+        }
+       
     }
 }
