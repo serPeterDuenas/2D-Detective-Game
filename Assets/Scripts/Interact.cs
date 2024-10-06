@@ -16,11 +16,18 @@ public class Interact : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (insideZone && Input.GetKeyDown("space"))
+        // check to see if game is paused OR if in dialogue
+        if (PauseMenu.isPaused == false ^ InteractiveObj.isInDialogue == true)
         {
-            Debug.Log("Interacted with object");
-            obj.ReturnMessage();
+            if (insideZone && Input.GetKeyDown("e"))
+            {
+                Debug.Log("Interacted with object");
+                obj.ReturnMessage();
+            }
         }
+        else
+            return;
+        
     }
 
 

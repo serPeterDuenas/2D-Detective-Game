@@ -24,22 +24,28 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        // Takes raw input for hori and vert movements, stores into fields;
-        inputHorizontal = Input.GetAxisRaw("Horizontal");
-        inputVertical = Input.GetAxisRaw("Vertical");
-
-        
-
-        // checks to see move direction and whether sprite is already facing in that direction, then flips
-        if(inputHorizontal > 0 && facingLeft)
+        if (PauseMenu.isPaused == false ^ InteractiveObj.isInDialogue == true)
         {
-            Flip();
+            //Debug.Log(InteractiveObj.isInDialogue);
+            // Takes raw input for hori and vert movements, stores into fields;
+            inputHorizontal = Input.GetAxisRaw("Horizontal");
+            inputVertical = Input.GetAxisRaw("Vertical");
+
+
+
+            // checks to see move direction and whether sprite is already facing in that direction, then flips
+            if (inputHorizontal > 0 && facingLeft)
+            {
+                Flip();
+            }
+            if (inputHorizontal < 0 && !facingLeft)
+            {
+                Flip();
+            }
         }
-        if(inputHorizontal < 0 && !facingLeft)
-        {
-            Flip();
-        }
+        else
+            return;
+      
     }
 
 
