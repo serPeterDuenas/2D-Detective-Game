@@ -10,9 +10,11 @@ public class DialogueManager : MonoBehaviour
     public float textSpeed = 0.07f;
     public TextMeshProUGUI textContainer;
     public GameObject dialogueBox;
+    public bool isTyping = false;
+
 
     [SerializeField] private Queue<string> queuedLines;
-
+    
 
     private void Awake()
     {
@@ -76,6 +78,8 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeLine(string currentLine)
     {
+        isTyping = true;
+
         textContainer.text = string.Empty;
         foreach(char c in currentLine.ToCharArray())
         {
@@ -83,6 +87,7 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(textSpeed);
         }
     }
+
 
 
     public void EndDialogue()

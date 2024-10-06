@@ -3726,9 +3726,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 631e0dc145e25694583c8b43b94f7f89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textSpeed: 0.08
+  textSpeed: 0.03
   textContainer: {fileID: 480994479}
   dialogueBox: {fileID: 457902473}
+  isTyping: 0
 --- !u!1 &1961027386
 GameObject:
   m_ObjectHideFlags: 0

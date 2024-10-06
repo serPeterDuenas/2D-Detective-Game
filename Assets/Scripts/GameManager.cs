@@ -6,7 +6,7 @@ using static Unity.VisualScripting.Member;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
-
+    
 
     private void Awake()
     {
@@ -29,6 +29,5 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }
