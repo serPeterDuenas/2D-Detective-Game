@@ -60,12 +60,15 @@ public class PlayerMovement : MonoBehaviour
     // Movement for the player
     private void FixedUpdate()
     {
+
+        // Checks to see if player is not in dialogue, allows player movement
         if (!InteractiveObj.isInDialogue)
         {
             moveDirection = new Vector2(inputHorizontal, inputVertical);
 
             rb.velocity = moveDirection.normalized * moveSpeed;
         }
+        // If player in dialogue, set velocity to 0
         else
         {
             rb.velocity = moveDirection * 0;
