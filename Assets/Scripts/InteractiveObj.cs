@@ -20,7 +20,10 @@ public class InteractiveObj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isInDialogue)
+        {
+            FindObjectOfType<PlayerMovement>();
+        }
     }
 
 

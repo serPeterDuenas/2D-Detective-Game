@@ -26,7 +26,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (PauseMenu.isPaused == false ^ InteractiveObj.isInDialogue == true)
         {
-            //Debug.Log(InteractiveObj.isInDialogue);
             // Takes raw input for hori and vert movements, stores into fields;
             inputHorizontal = Input.GetAxisRaw("Horizontal");
             inputVertical = Input.GetAxisRaw("Vertical");
@@ -44,18 +43,33 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         else
+        {
             return;
+        }
       
     }
 
+    private void StopMovement()
+    {
+        transform.position = new Vector3(transform.position.x,
+            transform.position.y,
+            transform.position.z);
+        rb.velocity = moveDirection * 0;
+    }
 
     // Movement for the player
     private void FixedUpdate()
     {
+        if (!InteractiveObj.isInDialogue)
+        {
+            moveDirection = new Vector2(inputHorizontal, inputVertical);
 
-        moveDirection = new Vector2(inputHorizontal, inputVertical);
-
-        rb.velocity = moveDirection.normalized * moveSpeed; 
+            rb.velocity = moveDirection.normalized * moveSpeed;
+        }
+        else
+        {
+            rb.velocity = moveDirection * 0;
+        }
     }
 
 
