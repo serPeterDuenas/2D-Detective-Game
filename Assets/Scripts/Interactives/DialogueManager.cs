@@ -6,6 +6,8 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
+
+
     public static DialogueManager instance { get; private set; }
     public float textSpeed = 0.07f;
     public TextMeshProUGUI textContainer;
