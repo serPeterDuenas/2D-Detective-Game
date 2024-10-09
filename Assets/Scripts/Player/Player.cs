@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -21,6 +22,18 @@ public class Player : MonoBehaviour
     }
 
 
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        var item = collision.GetComponent<Item>();
+        if(collision.tag == "Interactable" && item)
+        {
+            Debug.Log("added item");
+            inventory.AddItem(item.item, 1);
+            Destroy(collision.gameObject);
+        }
+    }
+
+
     // after entering dialogue, receive item through this method
     public static void AddItem(Item other)
     {
@@ -29,5 +42,11 @@ public class Player : MonoBehaviour
         {
             //inventory.AddItem(item.item, 1);
         }
+    }
+
+
+    private void OnApplicationQuit()
+    {
+        inventory.Container.Clear();
     }
 }

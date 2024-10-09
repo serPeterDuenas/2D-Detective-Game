@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Machete
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  type: 2
+  type: 1
   desc: The true murder weapon of the case.
