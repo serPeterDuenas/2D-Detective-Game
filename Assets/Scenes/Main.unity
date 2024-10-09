@@ -189,8 +189,147 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &28582041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 28582042}
+  - component: {fileID: 28582044}
+  - component: {fileID: 28582043}
+  m_Layer: 0
+  m_Name: InputManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &28582042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28582041}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1994389422}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &28582043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28582041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: c34cd48a4a1d2fd47b051744082c72a3, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b40fe9d4-ce09-4476-996c-ecabae30e787
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c1d1d833-0ff6-4acd-80a8-9cf4e931f2ec
+    m_ActionName: Player/Look[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 28e93301-d38b-4369-93ef-751c5a7a3351
+    m_ActionName: Player/Fire[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3cd37b10-44ea-4494-bf28-7229372370cd
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b5627358-a178-44a1-baef-9fbf231423ef
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5c389f7e-52a8-486d-82e1-d80964b865de
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b0618327-0631-4c25-b6b6-4f6031d4adfe
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 95126a11-7886-4c07-ab5e-54fc48c580f1
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 72740d5f-77a1-46be-8a41-75569ae4403c
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 153dba28-ccc0-4d66-8733-1464f41cdaa7
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2d2ec66d-ac55-4a2d-aff5-6ce3e998a3b4
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 13ffb9de-8a10-4bca-b68e-5691426fac3c
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8200cf1e-5641-4c9e-9158-c25e89d2be82
+    m_ActionName: UI/TrackedDeviceOrientation
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &28582044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28582041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1c41e18e2c2654bb704ef9fd2d9225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &112057573
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,7 +414,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1821809065}
+      - m_Target: {fileID: 1834400866}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
         m_MethodName: DisplayNextLine
         m_Mode: 1
@@ -571,6 +710,7 @@ MonoBehaviour:
     lines:
     - im suit man
     - second line
+  inkJSON: {fileID: 0}
 --- !u!1 &325763038
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,6 +876,7 @@ MonoBehaviour:
     lines:
     - hair guy im am
     - second line
+  inkJSON: {fileID: 0}
 --- !u!1 &405979838
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,7 +910,7 @@ Transform:
   - {fileID: 1546221845}
   - {fileID: 784114673}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &405979840
 BoxCollider2D:
@@ -956,7 +1097,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 466963449}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.97, y: -2.03, z: 0}
+  m_LocalPosition: {x: -1.7, y: 2.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1147,7 +1288,7 @@ Transform:
   m_Children:
   - {fileID: 810808452}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &480994477
 GameObject:
@@ -1528,7 +1669,7 @@ Transform:
   m_Children:
   - {fileID: 260973732}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &576424105
 GameObject:
@@ -2715,6 +2856,7 @@ MonoBehaviour:
     lines:
     - Im detective
     - this is second line
+  inkJSON: {fileID: 0}
 --- !u!1 &653640194
 GameObject:
   m_ObjectHideFlags: 0
@@ -2806,6 +2948,7 @@ MonoBehaviour:
     lines:
     - im overalls
     - second line
+  inkJSON: {fileID: 0}
 --- !u!1 &679610995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,7 +3008,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &679610998
 MonoBehaviour:
@@ -2898,6 +3041,7 @@ MonoBehaviour:
     lines:
     - "This is Locker_01\t\t"
     - This is the end of line for Locker_01
+  inkJSON: {fileID: 0}
 --- !u!114 &679611000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3006,6 +3150,7 @@ MonoBehaviour:
     - This is element 2
     - This is element 3
     - This is element 4
+  inkJSON: {fileID: 0}
 --- !u!114 &784114677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3110,6 +3255,7 @@ MonoBehaviour:
     lines:
     - im security
     - secponmd l;iomne
+  inkJSON: {fileID: 0}
 --- !u!1 &915415145
 GameObject:
   m_ObjectHideFlags: 0
@@ -4370,7 +4516,7 @@ Transform:
   m_Children:
   - {fileID: 653640195}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1028931079
 GameObject:
@@ -4408,6 +4554,7 @@ MonoBehaviour:
     lines:
     - this is vent wall objecty
     - 'This is the end of line '
+  inkJSON: {fileID: 0}
 --- !u!114 &1028931081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4462,7 +4609,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1028931084
 MonoBehaviour:
@@ -4512,6 +4659,7 @@ MonoBehaviour:
     lines:
     - This is smile wall text on top of wall
     - 'This is the end of line '
+  inkJSON: {fileID: 0}
 --- !u!114 &1071320424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4566,7 +4714,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1155578043
 GameObject:
@@ -4875,13 +5023,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169979468}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.33829814, y: -2.056986, z: -0.023020513}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.5874647, y: -0.464252, z: 0.016985778}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1994389422}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1299465879
 GameObject:
@@ -5052,6 +5200,7 @@ MonoBehaviour:
     lines:
     - this is clock wall
     - 'This is the end of line '
+  inkJSON: {fileID: 0}
 --- !u!114 &1365125494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5106,7 +5255,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1368411249
 GameObject:
@@ -5143,6 +5292,7 @@ MonoBehaviour:
     lines:
     - this is vent wall empty
     - 'This is the end of line '
+  inkJSON: {fileID: 0}
 --- !u!114 &1368411251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5197,7 +5347,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1402610181
 GameObject:
@@ -5444,7 +5594,7 @@ Transform:
   m_Children:
   - {fileID: 1559051854}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1482947865
 GameObject:
@@ -5482,6 +5632,7 @@ MonoBehaviour:
     lines:
     - this is rat hole object
     - 'This is the end of line '
+  inkJSON: {fileID: 0}
 --- !u!114 &1482947867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5536,7 +5687,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1482947870
 MonoBehaviour:
@@ -5880,7 +6031,7 @@ Transform:
   m_Children:
   - {fileID: 334617254}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1559051853
 GameObject:
@@ -5973,6 +6124,7 @@ MonoBehaviour:
     lines:
     - im girl
     - This is second line
+  inkJSON: {fileID: 0}
 --- !u!1 &1632401073
 GameObject:
   m_ObjectHideFlags: 0
@@ -6205,7 +6357,7 @@ RectTransform:
   - {fileID: 1155578044}
   - {fileID: 457902474}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6316,13 +6468,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639551854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.626, y: -1.113, z: 0}
+  m_LocalPosition: {x: -3.52, y: 2.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 593418413}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1797975280
 GameObject:
@@ -6359,6 +6511,7 @@ MonoBehaviour:
     lines:
     - this is rat hgole empty
     - 'This is the end of line '
+  inkJSON: {fileID: 0}
 --- !u!114 &1797975282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6413,7 +6566,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1821809061
 GameObject:
@@ -6426,7 +6579,6 @@ GameObject:
   - component: {fileID: 1821809063}
   - component: {fileID: 1821809062}
   - component: {fileID: 1821809064}
-  - component: {fileID: 1821809065}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6453,13 +6605,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821809061}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.99367094, y: -0.73748434, z: -0.004852503}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.2428375, y: 0.85524976, z: 0.035153788}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1994389422}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1821809064
 MonoBehaviour:
@@ -6474,13 +6626,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1155578043}
---- !u!114 &1821809065
+--- !u!1 &1834400864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1834400865}
+  - component: {fileID: 1834400866}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1834400865
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834400864}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1994389422}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1834400866
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821809061}
+  m_GameObject: {fileID: 1834400864}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 631e0dc145e25694583c8b43b94f7f89, type: 3}
@@ -6625,6 +6809,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961027386}
   m_CullTransparentMesh: 1
+--- !u!1 &1994389421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1994389422}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1994389422
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994389421}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.24916658, y: -1.5927341, z: -0.04000629}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1834400865}
+  - {fileID: 1821809063}
+  - {fileID: 1169979471}
+  - {fileID: 28582042}
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2029151265
 GameObject:
   m_ObjectHideFlags: 0
@@ -6660,6 +6879,7 @@ MonoBehaviour:
     lines:
     - This is smile wall
     - 'This is the end of line '
+  inkJSON: {fileID: 0}
 --- !u!114 &2029151267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6714,7 +6934,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2143386603
 GameObject:
