@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class InteractiveObj : MonoBehaviour
 {
-    [SerializeField] private string GiveMessage = "Hello";
-    [SerializeField] private AudioClip soundClip;
     
-    [SerializeField] private DialogueTrigger trigger;
-
-    public static bool isInDialogue = false;
-
-    // Start is called before the first frame update
+    
+ 
     void Start()
     {
         
@@ -20,21 +15,9 @@ public class InteractiveObj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isInDialogue)
-        {
-            FindObjectOfType<PlayerMovement>();
-        }
     }
 
 
-    public void ReturnMessage()
-    {
-        if (!isInDialogue) 
-        {
-            isInDialogue = true;
-            //trigger.TriggerDialogue();
-            SoundManager.instance.PlaySound(soundClip);
-        }
-       
-    }
+    
+      
 }

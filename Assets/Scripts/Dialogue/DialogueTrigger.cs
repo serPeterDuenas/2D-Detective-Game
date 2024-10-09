@@ -10,6 +10,8 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
 
+    [Header("Interaction sound")]
+    [SerializeField] private AudioClip soundClip;
     //private bool playerInRange = false;
 
     // Start is called before the first frame update
@@ -18,19 +20,11 @@ public class DialogueTrigger : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+    public void PlaySound()
     {
-        //if (playerInRange && !DialogueManager.instance.dialogueIsPlaying)
-       // {
-            // grabs InputManager's instance, and listens for if the input for interact was pressed
-          //  if(InputManager.instance.GetInteractPressed())
-           // {
-           ////    DialogueManager.instance.EnterDialogueMode(inkJSON);
-           // }
-       // }
-       // else
-           // return;
+        SoundManager.instance.PlaySound(soundClip);
     }
 
 
@@ -39,25 +33,4 @@ public class DialogueTrigger : MonoBehaviour
         DialogueManager.instance.EnterDialogueMode(inkJSON);
     }
 
-   // private void OnTriggerEnter2D(Collider2D collision)
-   // {
-    //    if (collision.tag == "Player")
-    //    {
-    //        playerInRange = true;
-    //    }
-   // }
-
-   // private void OnTriggerExit2D(Collider2D collision)
-   // {
-    //    if (collision.tag == "Player")
-    //    {
-    //        playerInRange = false;
-    //    }
-   // }
-
-
-    //public void TriggerDialogue()
-    //{
-   //     DialogueManager.instance.StartDialogue(dialogue);
-   // }
 }

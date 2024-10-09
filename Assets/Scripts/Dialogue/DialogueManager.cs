@@ -217,13 +217,4 @@ public class DialogueManager : MonoBehaviour
        //     yield return new WaitForSeconds(textSpeed);
        // }
     //}
-
-
-
-    public void EndDialogue()
-    {
-        Debug.Log("end of conversation");
-        InteractiveObj.isInDialogue = false;
-        dialogueBox.SetActive(false);
-    }
 }

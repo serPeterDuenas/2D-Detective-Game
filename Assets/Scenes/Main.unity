@@ -675,9 +675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e4c9d1174f9f148a0e8df98105ebe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GiveMessage: Hello
-  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
-  trigger: {fileID: 260973735}
 --- !u!61 &260973734
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -717,6 +714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 0}
+  soundClip: {fileID: 0}
 --- !u!1 &266832890
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,9 +923,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e4c9d1174f9f148a0e8df98105ebe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GiveMessage: I'm Locker 02
-  soundClip: {fileID: 0}
-  trigger: {fileID: 0}
 --- !u!1 &334617253
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,9 +969,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e4c9d1174f9f148a0e8df98105ebe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GiveMessage: Hello
-  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
-  trigger: {fileID: 334617257}
 --- !u!61 &334617256
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1016,6 +1008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 0}
+  soundClip: {fileID: 0}
 --- !u!1 &405979838
 GameObject:
   m_ObjectHideFlags: 0
@@ -2920,7 +2913,7 @@ GameObject:
   - component: {fileID: 593418415}
   - component: {fileID: 593418416}
   m_Layer: 0
-  m_Name: Trigger
+  m_Name: Dialogue_Trigger
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2979,9 +2972,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e4c9d1174f9f148a0e8df98105ebe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GiveMessage: Hello
-  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
-  trigger: {fileID: 593418416}
 --- !u!114 &593418416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2995,6 +2985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: fcb032c0dc421bc419b1d5908135f230, type: 3}
+  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
 --- !u!1 &653640194
 GameObject:
   m_ObjectHideFlags: 0
@@ -3041,9 +3032,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e4c9d1174f9f148a0e8df98105ebe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GiveMessage: Hello
-  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
-  trigger: {fileID: 653640198}
 --- !u!61 &653640197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3083,6 +3071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 0}
+  soundClip: {fileID: 0}
 --- !u!1 &679610995
 GameObject:
   m_ObjectHideFlags: 0
@@ -3156,9 +3145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e4c9d1174f9f148a0e8df98105ebe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GiveMessage: I'm Locker 01
-  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
-  trigger: {fileID: 679610999}
 --- !u!114 &679610999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3172,6 +3158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 0}
+  soundClip: {fileID: 0}
 --- !u!114 &679611000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3258,9 +3245,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e4c9d1174f9f148a0e8df98105ebe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GiveMessage: I'm table
-  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
-  trigger: {fileID: 784114676}
 --- !u!114 &784114676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3274,6 +3258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 0}
+  soundClip: {fileID: 0}
 --- !u!114 &784114677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3333,9 +3318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e4c9d1174f9f148a0e8df98105ebe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GiveMessage: Hello
-  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
-  trigger: {fileID: 810808455}
 --- !u!61 &810808454
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3375,6 +3357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 0}
+  soundClip: {fileID: 0}
 --- !u!1 &915415145
 GameObject:
   m_ObjectHideFlags: 0
@@ -4804,6 +4787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 0}
+  soundClip: {fileID: 0}
 --- !u!114 &1028931081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4816,9 +4800,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e4c9d1174f9f148a0e8df98105ebe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GiveMessage: I'm Locker 01
-  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
-  trigger: {fileID: 1028931080}
 --- !u!61 &1028931082
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4905,6 +4886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 0}
+  soundClip: {fileID: 0}
 --- !u!114 &1071320424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4917,9 +4899,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e4c9d1174f9f148a0e8df98105ebe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GiveMessage: I'm Locker 01
-  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
-  trigger: {fileID: 1071320423}
 --- !u!61 &1071320425
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5579,6 +5558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 0}
+  soundClip: {fileID: 0}
 --- !u!114 &1365125494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5591,9 +5571,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e4c9d1174f9f148a0e8df98105ebe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GiveMessage: I'm Locker 01
-  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
-  trigger: {fileID: 1365125493}
 --- !u!61 &1365125495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5667,6 +5644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 0}
+  soundClip: {fileID: 0}
 --- !u!114 &1368411251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5679,9 +5657,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e4c9d1174f9f148a0e8df98105ebe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GiveMessage: I'm Locker 01
-  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
-  trigger: {fileID: 1368411250}
 --- !u!61 &1368411252
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6138,6 +6113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 0}
+  soundClip: {fileID: 0}
 --- !u!114 &1482947867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6150,9 +6126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e4c9d1174f9f148a0e8df98105ebe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GiveMessage: I'm Locker 01
-  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
-  trigger: {fileID: 1482947866}
 --- !u!61 &1482947868
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6584,9 +6557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e4c9d1174f9f148a0e8df98105ebe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GiveMessage: Hello
-  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
-  trigger: {fileID: 1559051857}
 --- !u!61 &1559051856
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6626,6 +6596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 0}
+  soundClip: {fileID: 0}
 --- !u!1 &1632401073
 GameObject:
   m_ObjectHideFlags: 0
@@ -7009,6 +6980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 0}
+  soundClip: {fileID: 0}
 --- !u!114 &1797975282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7021,9 +6993,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e4c9d1174f9f148a0e8df98105ebe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GiveMessage: I'm Locker 01
-  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
-  trigger: {fileID: 1797975281}
 --- !u!61 &1797975283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7378,6 +7347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 0}
+  soundClip: {fileID: 0}
 --- !u!114 &2029151267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7390,9 +7360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e4c9d1174f9f148a0e8df98105ebe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GiveMessage: I'm Locker 01
-  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
-  trigger: {fileID: 2029151266}
 --- !u!61 &2029151268
 BoxCollider2D:
   m_ObjectHideFlags: 0
