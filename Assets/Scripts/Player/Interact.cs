@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Interact : MonoBehaviour
 {
-    private bool insideZone = false;
-    private InteractiveObj obj;
+    private bool playerInRange = false;
+    private DialogueTrigger obj;
 
     // Start is called before the first frame update
     void Start()
@@ -16,17 +16,32 @@ public class Interact : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // check to see if game is paused OR if in dialogue
-        if (PauseMenu.isPaused == false ^ InteractiveObj.isInDialogue == true)
+        if (PauseMenu.isPaused == false)
         {
-            if (insideZone && Input.GetKeyDown("e"))
+            if (playerInRange && !DialogueManager.instance.dialogueIsPlaying)
             {
-                Debug.Log("Interacted with object");
-                obj.ReturnMessage();
+                // grabs InputManager's instance, and listens for if the input for interact was pressed
+                if (InputManager.instance.GetInteractPressed())
+                {
+                    obj.EnterDialogue();
+                }
             }
+            else
+                return;
         }
         else
             return;
+
+        //if (PauseMenu.isPaused == false)
+        //{
+         //   Debug.Log("g")
+         //   if (insideZone && Input.GetKeyDown("e"))
+          //  {
+           //     Debug.Log("Interacted with object");
+           // }
+        //}
+       // else
+          //  return;
         
     }
 
@@ -35,9 +50,8 @@ public class Interact : MonoBehaviour
     {
         if(collision.tag == "Interactable")
         {
-            obj = collision.GetComponent<InteractiveObj>();
-            Debug.Log("Entered interaction zone");
-            insideZone = true;
+            obj = collision.GetComponent<DialogueTrigger>();
+            playerInRange = true;
             
         }
     }
@@ -45,6 +59,6 @@ public class Interact : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log("Exiting zone");
-        insideZone = false;
+        playerInRange = false;
     }
 }

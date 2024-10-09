@@ -24,15 +24,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PauseMenu.isPaused == false ^ InteractiveObj.isInDialogue == true)
+        // if there is no dialogue playing, then get input
+        if (!DialogueManager.instance.dialogueIsPlaying)
         {
-            // Takes raw input for hori and vert movements, stores into fields;
             inputHorizontal = Input.GetAxisRaw("Horizontal");
             inputVertical = Input.GetAxisRaw("Vertical");
 
-
-
-            // checks to see move direction and whether sprite is already facing in that direction, then flips
             if (inputHorizontal > 0 && facingLeft)
             {
                 Flip();
@@ -43,36 +40,25 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         else
-        {
             return;
-        }
-      
     }
 
-    private void StopMovement()
-    {
-        transform.position = new Vector3(transform.position.x,
-            transform.position.y,
-            transform.position.z);
-        rb.velocity = moveDirection * 0;
-    }
+ 
 
     // Movement for the player
     private void FixedUpdate()
     {
+        moveDirection = new Vector2(inputHorizontal, inputVertical);
+        rb.velocity = moveDirection.normalized * moveSpeed;
 
-        // Checks to see if player is not in dialogue, allows player movement
-        if (!InteractiveObj.isInDialogue)
-        {
-            moveDirection = new Vector2(inputHorizontal, inputVertical);
 
-            rb.velocity = moveDirection.normalized * moveSpeed;
-        }
-        // If player in dialogue, set velocity to 0
-        else
+
+        // stops player from moving if in dialogue
+        if(DialogueManager.instance.dialogueIsPlaying)
         {
             rb.velocity = moveDirection * 0;
         }
+      
     }
 
 

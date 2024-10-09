@@ -32,7 +32,7 @@ public class InteractiveObj : MonoBehaviour
         if (!isInDialogue) 
         {
             isInDialogue = true;
-            trigger.TriggerDialogue();
+            //trigger.TriggerDialogue();
             SoundManager.instance.PlaySound(soundClip);
         }
        

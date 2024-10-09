@@ -12,25 +12,26 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     private Vector2 moveDirection = Vector2.zero;
-    private bool jumpPressed = false;
+    private bool inventoryPressed = false;
     private bool interactPressed = false;
     private bool submitPressed = false;
 
-    private static InputManager instance;
+    public static InputManager instance { get; private set; }
 
     private void Awake()
     {
         if (instance != null)
         {
+            Destroy(this);
             Debug.LogError("Found more than one Input Manager in the scene.");
         }
         instance = this;
     }
 
-    public static InputManager GetInstance()
-    {
-        return instance;
-    }
+   // public static InputManager GetInstance()
+   // {
+   //     return instance;
+    //}
 
     public void MovePressed(InputAction.CallbackContext context)
     {
@@ -44,15 +45,15 @@ public class InputManager : MonoBehaviour
         }
     }
 
-    public void JumpPressed(InputAction.CallbackContext context)
+    public void InventoryPressed(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            jumpPressed = true;
+            inventoryPressed = true;
         }
         else if (context.canceled)
         {
-            jumpPressed = false;
+            inventoryPressed = false;
         }
     }
 
@@ -89,10 +90,10 @@ public class InputManager : MonoBehaviour
     // which means we should set it to false so that it can't be used again until actually
     // pressed again.
 
-    public bool GetJumpPressed()
+    public bool GetInventoryPressed()
     {
-        bool result = jumpPressed;
-        jumpPressed = false;
+        bool result = inventoryPressed;
+        inventoryPressed = false;
         return result;
     }
 
