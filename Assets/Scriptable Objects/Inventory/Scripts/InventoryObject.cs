@@ -15,26 +15,29 @@ public class InventoryObject : ScriptableObject
     {
         bool hasItem = false;
 
-        Debug.Log("Adding item to inventory");
 
         // loop through Container to find if Item has already been added
         for (int i = 0; i < Container.Count; i++) 
         {
+            Debug.Log(i);
             if (Container[i].item == _item) 
             {
+                Debug.Log("if container has item is true");
+                hasItem = true;
                 // if there is already this item, then call method AddAmount to increase quantity
                 Container[i].AddAmount(_amount);
-                Debug.Log("Already in inventory, adding");
-                hasItem = true;
+                
                 break;
             }
-            // If this item is not already in Container, then evoke InventorySlot constructor to add
-            if(!hasItem)
-            {
-                Debug.Log("adding new item to inventory");
-                Container.Add(new InventorySlot(_item, _amount));
-            }
+           
 
+        }
+
+        // If this item is not already in Container, then evoke InventorySlot constructor to add
+        if (!hasItem)
+        {
+            Debug.Log("if container has item is false");
+            Container.Add(new InventorySlot(_item, _amount));
         }
     }
 }
@@ -51,7 +54,6 @@ public class InventorySlot
     // of said item
     public InventorySlot(ItemObject _item, int _amount)
     {
-        Debug.Log("Adding inventory slot to invObj");
         item = _item;
         amount = _amount;
     }
@@ -59,7 +61,6 @@ public class InventorySlot
 
     public void AddAmount(int quantity)
     {
-        Debug.Log("adding amount to slot");
         amount += quantity;
     }
 }
