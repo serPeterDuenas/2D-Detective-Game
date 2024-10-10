@@ -22,7 +22,13 @@ public class DisplayInventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateDisplay();
+        if (!DialogueManager.instance.dialogueIsPlaying && DialogueManager.instance.endOfDialogue) 
+        {
+            UpdateDisplay(); 
+        }
+        else
+            return;
+       
     }
 
 

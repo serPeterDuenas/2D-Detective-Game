@@ -30,6 +30,7 @@ public class Interactable : MonoBehaviour
         if (DialogueManager.instance.endOfDialogue && canGiveItem)
         {
             GiveItem();
+            canGiveItem=false;
         }
         else
             return;
@@ -50,6 +51,7 @@ public class Interactable : MonoBehaviour
 
     private void GiveItem()
     {
+        Debug.Log("giving item");
         playerInventory.AddItem(item, 1);
     }
 

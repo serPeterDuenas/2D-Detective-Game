@@ -34,6 +34,7 @@ public class InventoryObject : ScriptableObject
         // If this item is not already in Container, then evoke InventorySlot constructor to add
         if (!hasItem)
         {
+            Debug.Log("Adding item into inventory");
             Container.Add(new InventorySlot(_item, _amount));
         }
     }
