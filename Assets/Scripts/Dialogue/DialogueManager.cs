@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Unity.VisualScripting.Member;
 using TMPro;
 using Ink.Runtime;
-using Unity.VisualScripting;
 using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
@@ -79,7 +77,7 @@ public class DialogueManager : MonoBehaviour
         // listen for if player pressed "interact" to continue with dialogue
         if (InputManager.instance.GetSubmitPressed())
         {
-            Debug.Log("Pressed 'submit' while in dialogue");
+            //Debug.Log("Pressed 'submit' while in dialogue");
             ContinueDialogue();
         }
 
@@ -122,6 +120,7 @@ public class DialogueManager : MonoBehaviour
 
     private void DisplayChoices()
     {
+        Debug.Log("Displaying the choice");
         // Choice comes from Ink, determiend by the Story selected
         List<Choice> currentChoices = currentStory.currentChoices;
 
@@ -170,7 +169,7 @@ public class DialogueManager : MonoBehaviour
         // As a way for outside classes to know if dialogue has ended
         // resets the field
         endOfDialogue = true;
-        StartCoroutine(ResetDialogue());
+        //StartCoroutine(ResetDialogue());
 
 
         dialogueIsPlaying = false;
