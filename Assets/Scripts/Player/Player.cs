@@ -9,16 +9,41 @@ public class Player : MonoBehaviour
     // the inventory for the player;
     public InventoryObject inventory;
 
+    public GameObject inventoryUI;
+
+    private bool inventoryOpen = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        inventoryUI.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // if input pressed and also inv not already open, then open
+        if(InputManager.instance.GetInventoryPressed())
+        {
+            
+           SetInventoryActive();
+        }
+    }
+
+
+    private void SetInventoryActive()
+    {
+        // If already open, then close
+        if(inventoryOpen == true) 
+        {
+            inventoryUI.SetActive(false);
+            inventoryOpen = false;
+        }
+        // Otherwise, if not open then open the panel
+        else if (inventoryOpen == false) 
+        {
+            inventoryUI.SetActive(true);
+            inventoryOpen = true;
+        }
     }
 
 
@@ -47,6 +72,6 @@ public class Player : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        inventory.Container.Clear();
+       inventory.Container.Clear();
     }
 }

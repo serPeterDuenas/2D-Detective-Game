@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d1ccfe45f973343a659f03181a906c, type: 3}
   m_Name: Chains
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 5243223813477331679, guid: 5d5c8d6a83ed5c14b99e5b2868435458, type: 3}
   type: 1
-  desc: Chains that were brought by Hair Guy.
+  desc: Chains that were brought by Raul.

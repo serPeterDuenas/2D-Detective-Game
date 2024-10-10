@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11b08b73af3da3245a5183d736643548, type: 3}
-  m_Name: Machete
+  m_Script: {fileID: 11500000, guid: 21b7347855c6b3c45848da49dc857c65, type: 3}
+  m_Name: Enrique_Letter
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7078245657796482256, guid: e29dffd28988590489868923884c8002, type: 3}
-  type: 2
-  desc: The true murder weapon of the case.
+  prefab: {fileID: 4410122730876461515, guid: 85b24745ce518f94ba2c629dcf0bc394, type: 3}
+  type: 0
+  desc: Enrique's letter of motivation.

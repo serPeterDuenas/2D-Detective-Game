@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21b7347855c6b3c45848da49dc857c65, type: 3}
-  m_Name: Girl_Letter
+  m_Name: Pink_Slip
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 8794187078619775209, guid: 2d09828a0f805c04495ab2df5c13445b, type: 3}
   type: 0
-  desc: The letter from the Girl.
+  desc: The pink slip given to Roberto. His motivation for murder.
