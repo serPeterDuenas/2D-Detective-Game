@@ -59,17 +59,6 @@ public class Player : MonoBehaviour
     }
 
 
-    // after entering dialogue, receive item through this method
-    public static void AddItem(Item other)
-    {
-        var item = other;
-        if(item)
-        {
-            //inventory.AddItem(item.item, 1);
-        }
-    }
-
-
     private void OnApplicationQuit()
     {
        inventory.Container.Clear();

@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractiveObj : MonoBehaviour
+public class ItemObjectTest : MonoBehaviour
 {
-    
-    
- 
+    // Start is called before the first frame update
     void Start()
     {
         
@@ -15,9 +13,6 @@ public class InteractiveObj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
     }
-
-
-    
-      
 }
