@@ -7,7 +7,7 @@ public class Interact : MonoBehaviour
     private bool playerInRange = false;
 
     // This is such a silly work around, but this will just work for now, I think
-    private DialogueTrigger trigger;
+    private Interactable trigger;
 
     
 
@@ -39,7 +39,7 @@ public class Interact : MonoBehaviour
     {
         if(collision.tag == "Interactable")
         {
-            trigger = collision.GetComponent<DialogueTrigger>();
+            trigger = collision.GetComponent<Interactable>();
             playerInRange = true;
             
         }

@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Unity.VisualScripting.Member;
 using TMPro;
 using Ink.Runtime;
-using Unity.VisualScripting;
 using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
@@ -25,6 +23,9 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager instance { get; private set; }
     public bool dialogueIsPlaying { get; private set; }
 
+
+    // To be used to check if can give item to player
+    public bool endOfDialogue { get;  set; }
 
     //[SerializeField] private Queue<string> queuedLines;
     
@@ -76,7 +77,7 @@ public class DialogueManager : MonoBehaviour
         // listen for if player pressed "interact" to continue with dialogue
         if (InputManager.instance.GetSubmitPressed())
         {
-            Debug.Log("Pressed 'submit' while in dialogue");
+            //Debug.Log("Pressed 'submit' while in dialogue");
             ContinueDialogue();
         }
 
@@ -119,6 +120,7 @@ public class DialogueManager : MonoBehaviour
 
     private void DisplayChoices()
     {
+        Debug.Log("Displaying the choice");
         // Choice comes from Ink, determiend by the Story selected
         List<Choice> currentChoices = currentStory.currentChoices;
 
@@ -163,58 +165,23 @@ public class DialogueManager : MonoBehaviour
 
 
     private void ExitDialogueMode()
-    { 
+    {
+        // As a way for outside classes to know if dialogue has ended
+        // resets the field
+        endOfDialogue = true;
+        //StartCoroutine(ResetDialogue());
+
+
         dialogueIsPlaying = false;
+
         dialogueBox.SetActive(false);
         textContainer.text = string.Empty;
     }
 
 
-
-
-
-
-    //public void StartDialogue(Dialogue dialogue)
-    //{
-        //Debug.Log("Starting conversation");
-
-        //queuedLines.Clear();
-
-       // foreach(string line in dialogue.lines)
-        //{
-           // queuedLines.Enqueue(line);
-            //Debug.Log(lines.Peek());
-        //}
-
-       // dialogueBox.SetActive(true);
-        //DisplayNextLine();
-    //}
-
-    //public void DisplayNextLine()
-    //{
-        //Debug.Log(queuedLines.Count);
-       // if(queuedLines.Count == 0)
-        //{
-         //   EndDialogue();
-         //   return;
-        //}
-
-       // string currentLine = queuedLines.Dequeue();
-       // Debug.Log(currentLine);
-        //StopAllCoroutines();
-        //StartCoroutine(TypeLine(currentLine));
-    //}
-    
-
-   // IEnumerator TypeLine(string currentLine)
-    //{
-       // isTyping = true;
-//
-       // textContainer.text = string.Empty;
-       // foreach(char c in currentLine.ToCharArray())
-       // {
-       //     textContainer.text += c;
-       //     yield return new WaitForSeconds(textSpeed);
-       // }
-    //}
+    private IEnumerator ResetDialogue() 
+    {
+        endOfDialogue = false;
+        yield return new WaitForSeconds(2);
+    }
 }
