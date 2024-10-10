@@ -25,7 +25,7 @@ public class DialogueManager : MonoBehaviour
 
 
     // To be used to check if can give item to player
-    public bool endOfDialogue { get; private set; }
+    public bool endOfDialogue { get;  set; }
 
     //[SerializeField] private Queue<string> queuedLines;
     
@@ -181,7 +181,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator ResetDialogue() 
     {
-        dialogueIsPlaying = false;
-        yield return new WaitForEndOfFrame();
+        endOfDialogue = false;
+        yield return new WaitForSeconds(2);
     }
 }

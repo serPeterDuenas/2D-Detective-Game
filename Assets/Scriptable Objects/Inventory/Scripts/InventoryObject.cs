@@ -6,6 +6,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="New Inventory", menuName ="Inventory System/Inventory")]
 public class InventoryObject : ScriptableObject
 {
+    void Awake ()
+    {
+
+    }
+
 
     // a list of InventorySlot, class which holds ItemObjects and quantity of it
     public List<InventorySlot> Container = new List<InventorySlot> ();
@@ -19,6 +24,7 @@ public class InventoryObject : ScriptableObject
         // loop through Container to find if Item has already been added
         for (int i = 0; i < Container.Count; i++) 
         {
+            Debug.Log("Looping through Container");
             if (Container[i].item == _item) 
             {
                 hasItem = true;
