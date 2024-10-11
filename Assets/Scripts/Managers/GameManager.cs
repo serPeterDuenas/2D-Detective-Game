@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
         inventoryUI.SetActive(false);
     }
 
+
+    // Perhaps pause time when inventory is open
     private void SetInventoryActive()
     {
         // If already open, then close

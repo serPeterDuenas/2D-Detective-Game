@@ -15,6 +15,7 @@ public class InputManager : MonoBehaviour
     private bool inventoryPressed = false;
     private bool interactPressed = false;
     private bool submitPressed = false;
+    private bool clickPressed = false;
 
     public static InputManager instance { get; private set; }
 
@@ -81,6 +82,19 @@ public class InputManager : MonoBehaviour
         }
     }
 
+
+    public void ClickPressed(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            clickPressed = true;
+        }
+        else if(context.canceled)
+        {
+            clickPressed = false;
+        }
+    }
+
     public Vector2 GetMoveDirection()
     {
         return moveDirection;
@@ -110,6 +124,15 @@ public class InputManager : MonoBehaviour
         submitPressed = false;
         return result;
     }
+
+
+    public bool GetClickPressed()
+    {
+        bool result = clickPressed;
+        clickPressed = false;
+        return result;
+    }
+
 
     public void RegisterSubmitPressed()
     {
