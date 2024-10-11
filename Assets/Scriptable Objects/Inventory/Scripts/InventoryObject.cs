@@ -8,7 +8,9 @@ public class InventoryObject : ScriptableObject
 {
     void Awake ()
     {
-
+        // When loading into scene, for some reason 
+        // populates the Container with all of the prefabs
+        Container.Clear();
     }
 
 
