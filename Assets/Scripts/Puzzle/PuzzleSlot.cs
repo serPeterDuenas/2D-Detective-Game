@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum SlotType
+{
+    Weapon,
+    Motivation,
+    Suspect
+}
+
 public class PuzzleSlot : MonoBehaviour
 {
-    public enum SlotType
-    {
-        Weapon,
-        Motivation,
-        Suspect
-    }
+    
 
     public SlotType type;
 
@@ -31,7 +34,14 @@ public class PuzzleSlot : MonoBehaviour
     public void MakeSlotUnavailable()
     {
         slotAvailable = false;
+        SendManagerInfo();
     }    
+
+
+    private void SendManagerInfo()
+    {
+
+    }
 
 
     public void MakeSlotAvailable()

@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum PieceType
+{
+    Weapon,
+    Motivation,
+    Suspect
+}
+
 public class PuzzlePiece : MonoBehaviour
 {
-    public enum PieceType
-    {
-        Weapon,
-        Motivation,
-        Suspect
-    }
+  
 
     public PieceType type;
 
@@ -87,6 +90,7 @@ public class PuzzlePiece : MonoBehaviour
             // If it was placed, then make the slot available
             if (placed)
             {
+                PuzzleManager.instance.DecrementSlot();
                 placed = false;
                 thisSlot.MakeSlotAvailable();
             }
@@ -125,6 +129,7 @@ public class PuzzlePiece : MonoBehaviour
             transform.position = motivationSlot.transform.position;
             thisSlot.MakeSlotUnavailable();
             placed = true;
+            PuzzleManager.instance.IncrementSlot();
             isHolding = false;
         }
         else if (Vector2.Distance(transform.position, weaponSlot.transform.position) < distanceFromSlot)
@@ -132,6 +137,7 @@ public class PuzzlePiece : MonoBehaviour
             transform.position = weaponSlot.transform.position;
             thisSlot.MakeSlotUnavailable();
             placed = true;
+            PuzzleManager.instance.IncrementSlot();
             isHolding = false;
         }
         else if (Vector2.Distance(transform.position, suspectSlot.transform.position) < distanceFromSlot)
@@ -139,6 +145,7 @@ public class PuzzlePiece : MonoBehaviour
             transform.position = suspectSlot.transform.position;
             thisSlot.MakeSlotUnavailable();
             placed = true;
+            PuzzleManager.instance.IncrementSlot();
             isHolding = false;
         }
     }
