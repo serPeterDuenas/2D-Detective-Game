@@ -12,11 +12,13 @@ public enum PieceType
 
 public class PuzzlePiece : MonoBehaviour
 {
-  
+    [SerializeField] private string pieceName;  
+    
 
     public PieceType type;
 
     [SerializeField] private float distanceFromSlot;
+
 
     private bool isHolding = false;
     private bool placed = false;
@@ -122,31 +124,34 @@ public class PuzzlePiece : MonoBehaviour
     }
     
 
+    private void PlacePieceIntoSlot()
+    {
+        thisSlot.MakeSlotUnavailable();
+        placed = true;
+        PuzzleManager.instance.IncrementSlot();
+        PuzzleManager.instance.GetSelectedPiece(pieceName, thisSlot.GetSlotType());
+        isHolding = false;
+    }
+
+
     private void CheckDistance()
     {
         if (Vector2.Distance(transform.position, motivationSlot.transform.position) <= distanceFromSlot)
         {
             transform.position = motivationSlot.transform.position;
-            thisSlot.MakeSlotUnavailable();
-            placed = true;
-            PuzzleManager.instance.IncrementSlot();
-            isHolding = false;
+            PlacePieceIntoSlot();
+
+
         }
         else if (Vector2.Distance(transform.position, weaponSlot.transform.position) < distanceFromSlot)
         {
             transform.position = weaponSlot.transform.position;
-            thisSlot.MakeSlotUnavailable();
-            placed = true;
-            PuzzleManager.instance.IncrementSlot();
-            isHolding = false;
+            PlacePieceIntoSlot();
         }
         else if (Vector2.Distance(transform.position, suspectSlot.transform.position) < distanceFromSlot)
         {
             transform.position = suspectSlot.transform.position;
-            thisSlot.MakeSlotUnavailable();
-            placed = true;
-            PuzzleManager.instance.IncrementSlot();
-            isHolding = false;
+            PlacePieceIntoSlot();
         }
     }
 

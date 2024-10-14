@@ -7,7 +7,12 @@ public class PuzzleManager : MonoBehaviour
     // an increment for the slots filled, once at 3, should allow
     // the button to then appear and become interactable
     public static int filledSlots { get; private set; }
-    private Dictionary<string, SlotType> puzzlePieces = new();
+
+    // Dictionary that takes in the puzzle piece and which slot it is in
+    // Parses if the Dictionary is in correct order, then ends game 
+    private Dictionary<string, SlotType> PuzzlePieces = new();
+
+
     [SerializeField] private GameObject button;
 
     public static PuzzleManager instance { get ; private set; }
@@ -24,9 +29,6 @@ public class PuzzleManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        puzzlePieces.Add("Machete", SlotType.Weapon);
-        puzzlePieces.Add("Bianca", SlotType.Suspect);
-        puzzlePieces.Add("Watch", SlotType.Motivation);
         button.SetActive(false);
     }
 
@@ -56,42 +58,15 @@ public class PuzzleManager : MonoBehaviour
 
     public void ParseSelections()
     {
-        int correctSlots = 0;
-        foreach(var (key, value) in puzzlePieces)
-        {
-            if(key == "Bianca" && value == SlotType.Suspect) 
-            {
-                correctSlots++;
-                Debug.Log("One selection is correct");
-            }
-            if(key == "Machete" && value == SlotType.Weapon)
-            {
-                correctSlots++;
-                Debug.Log("One selection is correct");
-
-            }
-            if(key == "Watch" && value == SlotType.Motivation)
-            {
-                correctSlots++;
-                Debug.Log("One selection is correct");
-                Debug.Log(correctSlots);
-            }
-            else
-            {
-                Debug.Log("The selections are not correct");
-                correctSlots = 0;
-                Debug.Log(correctSlots);
-            }
-            Debug.Log(key + ": " + value);
-        }
-        Debug.Log("Checking player's selection after hitting button");
+        //Debug.Log("Checking player's selection after hitting button");
         //CheckCorrect();
     }
 
 
-    public void GetSelectedPiece(PieceType pieceType, SlotType slotType)
+    public void GetSelectedPiece(string pieceName, SlotType slotType)
     {
-        Debug.Log(pieceType);
+        Debug.Log("Piece has been placed, ID as follows");
+        Debug.Log(pieceName);
         Debug.Log(slotType);
     }
 
@@ -100,13 +75,13 @@ public class PuzzleManager : MonoBehaviour
     {
        
         filledSlots++;
-        Debug.Log("Filled slots: " + filledSlots);
+       // Debug.Log("Filled slots: " + filledSlots);
     }
 
     public void DecrementSlot()
     {
         
         filledSlots--;
-        Debug.Log("Filled slots: " + filledSlots);
+        //Debug.Log("Filled slots: " + filledSlots);
     }
 }

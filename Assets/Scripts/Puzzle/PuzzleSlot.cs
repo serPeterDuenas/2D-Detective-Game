@@ -1,3 +1,4 @@
+using Ink.Parsed;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,7 @@ public class PuzzleSlot : MonoBehaviour
 {
     
 
-    public SlotType type;
+    [SerializeField] private SlotType type;
 
    [SerializeField] bool slotAvailable = true;
 
@@ -30,6 +31,11 @@ public class PuzzleSlot : MonoBehaviour
     {
     }
 
+
+    public SlotType GetSlotType()
+    {
+        return type;
+    }
 
     public void MakeSlotUnavailable()
     {

@@ -3005,6 +3005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f057fb82e4a09be489d1be98480e72ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pieceName: Player
   type: 2
   distanceFromSlot: 1
   motivationSlot: {fileID: 2043780229}
@@ -7652,6 +7653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f057fb82e4a09be489d1be98480e72ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pieceName: Bianca
   type: 2
   distanceFromSlot: 1
   motivationSlot: {fileID: 2043780229}
@@ -9306,6 +9308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f057fb82e4a09be489d1be98480e72ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pieceName: Watch
   type: 0
   distanceFromSlot: 1
   motivationSlot: {fileID: 2043780229}
@@ -9785,6 +9788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f057fb82e4a09be489d1be98480e72ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pieceName: Machete
   type: 0
   distanceFromSlot: 1
   motivationSlot: {fileID: 2043780229}
