@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interactable
   - SolidObj
+  - PuzzleSlot
   layers:
   - Default
   - TransparentFX
