@@ -92,7 +92,8 @@ public class PuzzlePiece : MonoBehaviour
             // If it was placed, then make the slot available
             if (placed)
             {
-                PuzzleManager.instance.DecrementSlot();
+                PuzzleManager.instance.DeleteSelectedPiece(pieceName, thisSlot.GetSlotType());
+                //PuzzleManager.instance.DecrementSlot();
                 placed = false;
                 thisSlot.MakeSlotAvailable();
             }
@@ -128,8 +129,8 @@ public class PuzzlePiece : MonoBehaviour
     {
         thisSlot.MakeSlotUnavailable();
         placed = true;
-        PuzzleManager.instance.IncrementSlot();
-        PuzzleManager.instance.GetSelectedPiece(pieceName, thisSlot.GetSlotType());
+        //PuzzleManager.instance.IncrementSlot();
+        PuzzleManager.instance.AddSelectedPiece(pieceName, thisSlot.GetSlotType());
         isHolding = false;
     }
 

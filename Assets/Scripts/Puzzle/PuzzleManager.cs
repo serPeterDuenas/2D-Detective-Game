@@ -17,6 +17,9 @@ public class PuzzleManager : MonoBehaviour
 
     public static PuzzleManager instance { get ; private set; }
 
+    private bool puzzleCompleted = false;
+    private int correctSlots = 0;
+
     private void Awake()
     {
         if(instance != null)
@@ -32,7 +35,8 @@ public class PuzzleManager : MonoBehaviour
         button.SetActive(false);
     }
 
-    // Update is called once per frame
+
+   
     void Update()
     {
         // if the slots are not full, then keep inactive
@@ -44,6 +48,19 @@ public class PuzzleManager : MonoBehaviour
         else
         {
             MakeButtonActive();
+        }
+
+        if(puzzleCompleted)
+        {
+            // Activate UI element for End game
+            // End game here
+
+            Debug.Log("You won the game!"); ;
+       
+        }
+        else
+        {
+            return;
         }
     }
 
@@ -58,22 +75,70 @@ public class PuzzleManager : MonoBehaviour
 
     public void ParseSelections()
     {
-        //Debug.Log("Checking player's selection after hitting button");
-        //CheckCorrect();
+        foreach (var (key, values) in PuzzlePieces)
+        {
+            if(key == "Bianca" && values == SlotType.Suspect)
+            {
+                correctSlots++;
+                continue;
+            }
+            else if(key == "Machete" && values == SlotType.Weapon)
+            {
+                correctSlots++;
+                continue;
+            }
+            else if(key == "Watch" && values == SlotType.Motivation)
+            {
+                correctSlots++;
+                continue;
+            }
+            else
+            {
+                correctSlots = 0;
+            }
+        }
+
+        Debug.Log(correctSlots);
+        if(correctSlots == 3)
+        {
+            puzzleCompleted = true;
+        }
     }
 
 
-    public void GetSelectedPiece(string pieceName, SlotType slotType)
+
+    // Takes in the piece that's been added and to which slot
+    // Increments field
+    public void AddSelectedPiece(string pieceName, SlotType slotType)
     {
         Debug.Log("Piece has been placed, ID as follows");
         Debug.Log(pieceName);
         Debug.Log(slotType);
+
+        PuzzlePieces.Add(pieceName, slotType);
+        IncrementSlot();
+
     }
 
 
-    public void IncrementSlot()
+    // If piece removed, then delete from Dictionary 
+    // Decrement from field
+    public void DeleteSelectedPiece(string pieceName, SlotType slotType)
     {
-       
+        Debug.Log("Piece has been deleted from Dictioanry, ID as follows");
+        Debug.Log(pieceName);
+        Debug.Log(slotType);
+
+        PuzzlePieces.Remove(pieceName);
+        DecrementSlot();
+
+    }
+
+    // This method adds to Dictionary, and increments field to know if at any point
+    // There are exactly 3 filled slots
+    private void IncrementSlot()
+    {
+        
         filledSlots++;
        // Debug.Log("Filled slots: " + filledSlots);
     }
