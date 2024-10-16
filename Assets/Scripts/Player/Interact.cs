@@ -39,6 +39,7 @@ public class Interact : MonoBehaviour
     {
         if(collision.tag == "Interactable")
         {
+            Debug.Log("Entered an interactable hitbox");
             trigger = collision.GetComponent<Interactable>();
             playerInRange = true;
             

@@ -27,6 +27,7 @@ public class Interactable : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(canGiveItem);
         if (DialogueManager.instance.endOfDialogue && canGiveItem)
         {
             GiveItem();
