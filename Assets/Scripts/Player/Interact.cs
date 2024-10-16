@@ -14,7 +14,11 @@ public class Interact : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!PauseMenu.isPaused)
+        if (PauseMenu.isPaused)
+        {
+            return;
+        }
+        else
         {
             if (playerInRange && !DialogueManager.instance.dialogueIsPlaying)
             {
@@ -25,11 +29,7 @@ public class Interact : MonoBehaviour
                     trigger.PlaySound();
                 }
             }
-            else
-                return;
         }
-        else
-            return;
 
         
     }

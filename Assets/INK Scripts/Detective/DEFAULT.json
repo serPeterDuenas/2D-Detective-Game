@@ -1,1 +1,1 @@
-﻿{"inkVersion":21,"root":[["^This is test dialogue for Detective","\n","^Just testing to see how to switch out dialogue depending on the moment in game","\n",["done",{"#f":5,"#n":"g-0"}],null],"done",{"#f":1}],"listDefs":{}}
+﻿{"inkVersion":21,"root":[["^JSON file called DEFAULT","\n","^Should be read after already have entered dialogueEntered","\n",["done",{"#f":5,"#n":"g-0"}],null],"done",{"#f":1}],"listDefs":{}}

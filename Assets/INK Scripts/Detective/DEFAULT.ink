@@ -1,3 +1,2 @@
-This is test dialogue for Detective
-
-Just testing to see how to switch out dialogue depending on the moment in game
+JSON file called DEFAULT
+Should be read after already have entered dialogueEntered

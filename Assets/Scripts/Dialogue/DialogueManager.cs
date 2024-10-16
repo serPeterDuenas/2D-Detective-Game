@@ -71,7 +71,12 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
-
+        //if (endOfDialogue)
+       // {
+        //    Debug.Log("reached end of dialogue");
+       // }
+       // else
+         //   return;
 
 
         // listen for if player pressed "interact" to continue with dialogue
@@ -90,6 +95,7 @@ public class DialogueManager : MonoBehaviour
         // creates an instance of Story using TextAsset argument
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
+        endOfDialogue = false;
         dialogueBox.SetActive(true);
 
 
@@ -182,6 +188,6 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator ResetDialogue() 
     {
         endOfDialogue = false;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
     }
 }
