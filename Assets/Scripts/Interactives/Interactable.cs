@@ -2,58 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour
+public interface Interactable
 {
-    [Header("Reference to PlayerInventory")]
-    [SerializeField] private InventoryObject playerInventory;
-
-    [Header("Ink JSON")]
-    [SerializeField] private TextAsset inkJSON;
-
-    [Header("Interaction sound")]
-    [SerializeField] private AudioClip soundClip;
-
-    [Header("Item, if any")]
-    [SerializeField] private bool canGiveItem = false;
-    public ItemObject item;
+    
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
+    public  void PlaySound();
 
 
-    private void Update()
-    {
-        Debug.Log(canGiveItem);
-        if (DialogueManager.instance.endOfDialogue && canGiveItem)
-        {
-            GiveItem();
-            canGiveItem=false;
-        }
-        else
-            return;
-    }
+    public  void EnterDialogue();
+    //DialogueManager.instance.EnterDialogueMode(inkJSON);
 
 
-    public void PlaySound()
-    {
-        SoundManager.instance.PlaySound(soundClip);
-    }
-
-
-    public void EnterDialogue()
-    {
-        DialogueManager.instance.EnterDialogueMode(inkJSON);
-    }
-
-
-    private void GiveItem()
-    {
-        Debug.Log("giving item");
-        playerInventory.AddItem(item, 1);
-    }
+    //public void GiveItem();
+        //Debug.Log("giving item");
+        //playerInventory.AddItem(item, 1);
 
 }

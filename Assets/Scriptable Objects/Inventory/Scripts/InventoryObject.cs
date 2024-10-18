@@ -26,7 +26,7 @@ public class InventoryObject : ScriptableObject
         // loop through Container to find if Item has already been added
         for (int i = 0; i < Container.Count; i++) 
         {
-            Debug.Log("Looping through Container");
+            //Debug.Log("Looping through Container");
             if (Container[i].item == _item) 
             {
                 hasItem = true;
@@ -42,7 +42,7 @@ public class InventoryObject : ScriptableObject
         // If this item is not already in Container, then evoke InventorySlot constructor to add
         if (!hasItem)
         {
-            Debug.Log("Adding item into inventory");
+            //Debug.Log("Adding item into inventory");
             Container.Add(new InventorySlot(_item, _amount));
         }
     }

@@ -24,7 +24,7 @@ public class DisplayInventory : MonoBehaviour
     {
         if (DialogueManager.instance.endOfDialogue) 
         {
-            Debug.Log(DialogueManager.instance.endOfDialogue);
+            //Debug.Log(DialogueManager.instance.endOfDialogue);
             UpdateDisplay(); 
             if(DialogueManager.instance.endOfDialogue)
             {
@@ -71,17 +71,17 @@ public class DisplayInventory : MonoBehaviour
         // Loop through inventory and check for if there are Slot keys, na
         for (int i = 0; i < inventory.Container.Count; i++)
         {
-            Debug.Log(i);
+            //Debug.Log(i);
             // If in the dictionary there is already an InventorySlot, then do nothing since Im not
             // putting text on screen
             if (itemsDisplayed.ContainsKey(inventory.Container[i]))
             {
-                Debug.Log("Item already in inventory");
+                //Debug.Log("Item already in inventory");
             }
             // Otherwise, instantiate the Image object onto the UI panel, as done also in CreateDisplay
             else
             {
-                Debug.Log("Creating Image for new item obtained");
+                //Debug.Log("Creating Image for new item obtained");
                 var obj = Instantiate(inventory.Container[i].item.prefab,
                 Vector3.zero, Quaternion.identity, transform);
 

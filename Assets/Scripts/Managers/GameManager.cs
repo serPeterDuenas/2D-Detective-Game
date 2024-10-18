@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using System;
 using static Unity.VisualScripting.Member;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject GameRoom;
-    public bool gatheredAllItems { get; private set; }
+    [SerializeField] private GameObject MainRoom;
+    [SerializeField] private GameObject PuzzleRoom;
+    [SerializeField] private GameObject PuzzleUI;
 
+    public bool AllItemsCollected { get; private set; }
+    public static int ItemsCollected { get; private set; } = 0;
 
     public static GameManager instance { get; private set; }
 
@@ -18,10 +23,54 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject inventoryUI;
 
     private bool inventoryOpen = false;
-    // Start is called before the first frame update
+
+
+    // delegate for when all items have been collected
+    //public delegate void OnItemsCollected();
+    public event Action OnItemsCollected;
+
     void Start()
     {
         inventoryUI.SetActive(false);
+    }
+
+
+    void Update()
+    {
+        // if input pressed and also inv not already open, then open
+        if (InputManager.instance.GetInventoryPressed())
+        {
+
+            SetInventoryActive();
+        }
+
+        if(ItemsCollected == 2)
+        {
+            SetAllItemsCollected();
+        }
+    }
+
+
+
+    public void GoToPuzzleSection()
+    {
+        print("going to puzzle room");
+        MainRoom.SetActive(false);
+        PuzzleRoom.SetActive(true);
+        PuzzleUI.SetActive(true); 
+    }
+
+
+    public void IncrementItemsAdded()
+    {
+        ItemsCollected++;
+    }
+
+    private void SetAllItemsCollected()
+    {
+        print("Event fired, setting bool AllItemsCollected to True");
+        AllItemsCollected = true; 
+        ItemsCollected = 0;
     }
 
 
@@ -47,7 +96,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        gatheredAllItems = false;
+        //gatheredAllItems = false;
         if (instance != null && instance != this)
         {
             Destroy(this);
@@ -59,16 +108,7 @@ public class GameManager : MonoBehaviour
 
     }
      
-    // Update is called once per frame
-    void Update()
-    {
-        // if input pressed and also inv not already open, then open
-        if (InputManager.instance.GetInventoryPressed())
-        {
-
-            SetInventoryActive();
-        }
-    }
+   
 
 
     private void OnApplicationQuit()

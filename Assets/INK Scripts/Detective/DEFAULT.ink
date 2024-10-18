@@ -1,3 +1,3 @@
-This is test dialogue for Detective
+This dialogue is present once the player has collected everything
 
-Just testing to see how to switch out dialogue depending on the moment in game
+This means that now we will enter the puzzle section of the game.

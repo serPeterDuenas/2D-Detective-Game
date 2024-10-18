@@ -4,9 +4,14 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
+using Ink.UnityIntegration;
 
 public class DialogueManager : MonoBehaviour
 {
+    // var for the load_globals.ink JSON
+    [Header("Load Globals JSON")]
+    [SerializeField] private TextAsset loadGlobalsJSON;
+
     [Header("Dialogue UI")]
     [SerializeField] private float textSpeed = 0.07f;
     [SerializeField] private TextMeshProUGUI textContainer;
@@ -20,14 +25,12 @@ public class DialogueManager : MonoBehaviour
 
 
     private Story currentStory;
+    private DialogueVariables dialogueVariables;
+
     public static DialogueManager instance { get; private set; }
     public bool dialogueIsPlaying { get; private set; }
-
-
-    // To be used to check if can give item to player
     public bool endOfDialogue { get;  set; }
 
-    //[SerializeField] private Queue<string> queuedLines;
     
 
     private void Awake()
@@ -42,6 +45,7 @@ public class DialogueManager : MonoBehaviour
             instance = this;
         }
 
+        dialogueVariables = new DialogueVariables(loadGlobalsJSON);
     }
 
 
@@ -66,12 +70,18 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
+        
         // return right away if dialogue isn't playing
         if (!dialogueIsPlaying)
         {
             return;
         }
-
+        //if (endOfDialogue)
+       // {
+        //    Debug.Log("reached end of dialogue");
+       // }
+       // else
+         //   return;
 
 
         // listen for if player pressed "interact" to continue with dialogue
@@ -90,9 +100,13 @@ public class DialogueManager : MonoBehaviour
         // creates an instance of Story using TextAsset argument
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
+        endOfDialogue = false;
         dialogueBox.SetActive(true);
 
+        dialogueVariables.StartListening(currentStory);
 
+
+        print("entering dialogue");
 
         ContinueDialogue();
     }
@@ -112,7 +126,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            ExitDialogueMode();
+            StartCoroutine(ExitDialogueMode());
         }
     }
 
@@ -120,7 +134,7 @@ public class DialogueManager : MonoBehaviour
 
     private void DisplayChoices()
     {
-        Debug.Log("Displaying the choice");
+        //Debug.Log("Displaying the choice");
         // Choice comes from Ink, determiend by the Story selected
         List<Choice> currentChoices = currentStory.currentChoices;
 
@@ -164,13 +178,17 @@ public class DialogueManager : MonoBehaviour
     }
 
 
-    private void ExitDialogueMode()
+    IEnumerator ExitDialogueMode()
     {
+
+        yield return new WaitForSeconds(0.2f);
+        print("exiting dialogue");
         // As a way for outside classes to know if dialogue has ended
         // resets the field
         endOfDialogue = true;
-        //StartCoroutine(ResetDialogue());
 
+
+        dialogueVariables.StopListening(currentStory);
 
         dialogueIsPlaying = false;
 
@@ -179,9 +197,22 @@ public class DialogueManager : MonoBehaviour
     }
 
 
+    public Ink.Runtime.Object GetVariableState(string name)
+    {
+        Ink.Runtime.Object variableValue = null;
+        dialogueVariables.variables.TryGetValue(name, out variableValue);
+        if(variableValue == null)
+        {
+            Debug.LogWarning("Ink variable was null: " + variableValue);
+        }
+
+        return variableValue;
+    }
+
+
     private IEnumerator ResetDialogue() 
     {
         endOfDialogue = false;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
     }
 }
