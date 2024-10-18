@@ -1,1 +1,1 @@
-﻿{"inkVersion":21,"root":[["^JSON file called DEFAULT","\n","^Should be read after already have entered dialogueEntered","\n",["done",{"#f":5,"#n":"g-0"}],null],"done",{"#f":1}],"listDefs":{}}
+﻿{"inkVersion":21,"root":[["^This dialogue is present once the player has collected everything","\n","^This means that now we will enter the puzzle section of the game.","\n",["done",{"#f":5,"#n":"g-0"}],null],"done",{"#f":1}],"listDefs":{}}

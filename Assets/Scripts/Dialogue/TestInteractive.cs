@@ -28,18 +28,7 @@ public class TestInteractive : MonoBehaviour, Interactable
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        //Debug.Log(canGiveItem);
-        if (DialogueManager.instance.endOfDialogue && isInteracting)
-        {
-            Debug.Log("calling give item from testInteractive");
-            GiveItem();
-            isInteracting = !isInteracting;
-        }
-        else
-            return;
-    }
+   
 
 
     public void EnterDialogue()

@@ -81,7 +81,7 @@ public class DisplayInventory : MonoBehaviour
             // Otherwise, instantiate the Image object onto the UI panel, as done also in CreateDisplay
             else
             {
-                Debug.Log("Creating Image for new item obtained");
+                //Debug.Log("Creating Image for new item obtained");
                 var obj = Instantiate(inventory.Container[i].item.prefab,
                 Vector3.zero, Quaternion.identity, transform);
 

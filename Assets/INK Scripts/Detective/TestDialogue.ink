@@ -1,2 +1,2 @@
-JSON FILE TestDialogue
-The first option if dialogueEntered is 0
+This text only fires if the player hasn't collected every item
+So go out there and collect them all!

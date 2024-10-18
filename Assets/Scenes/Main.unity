@@ -501,7 +501,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &47555244
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2151,7 +2151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &385592086
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2159,20 +2159,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385592085}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1470372335}
   - {fileID: 337522678}
-  m_Father: {fileID: 1638098949}
-  m_RootOrder: 3
+  m_Father: {fileID: 1583468023}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -375}
-  m_SizeDelta: {x: -500, y: -950}
+  m_SizeDelta: {x: 1320, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &385592087
 MonoBehaviour:
@@ -2284,11 +2284,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1b2b05e3b9baf45976c3e3f8495c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInteracting: 0
   playerInventory: {fileID: 11400000, guid: 727146c40c145b84bbcd32e76e34f5f8, type: 2}
-  soundClip: {fileID: 8300000, guid: 1778c2e9ef29da740a9ef31134ac2f57, type: 3}
-  inkJSON: {fileID: 4900000, guid: 01a5e9264f272e848bfe02e8c9f45498, type: 3}
   canGiveItem: 1
   item: {fileID: 11400000, guid: 74d6bd9fb3211074eb087091e2f6df59, type: 2}
+  soundClip: {fileID: 8300000, guid: 1778c2e9ef29da740a9ef31134ac2f57, type: 3}
+  inkJSON: {fileID: 4900000, guid: 01a5e9264f272e848bfe02e8c9f45498, type: 3}
 --- !u!1 &405979838
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,12 +2448,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428207890}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.24914551, y: 1.5927124, z: 0.04000629}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 525025850}
+  m_Father: {fileID: 1994389422}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &428207892
@@ -3327,7 +3328,7 @@ GameObject:
   - component: {fileID: 518249536}
   - component: {fileID: 518249539}
   - component: {fileID: 518249538}
-  - component: {fileID: 518249537}
+  - component: {fileID: 518249540}
   m_Layer: 0
   m_Name: Detective_Mockup (1)
   m_TagString: Interactable
@@ -3351,23 +3352,6 @@ Transform:
   m_Father: {fileID: 1336336725}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &518249537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 518249535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced8f3a4347c47a43b81a92ccb28a5de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInventory: {fileID: 11400000, guid: 727146c40c145b84bbcd32e76e34f5f8, type: 2}
-  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
-  inkJSON: {fileID: 4900000, guid: 82e69601d19b98f4bb66265b45486402, type: 3}
-  canGiveItem: 1
-  item: {fileID: 11400000, guid: 6a7f95f42f09bc54786c38bec13aef51, type: 2}
 --- !u!61 &518249538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3446,6 +3430,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &518249540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518249535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1b2b05e3b9baf45976c3e3f8495c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteracting: 0
+  playerInventory: {fileID: 11400000, guid: 727146c40c145b84bbcd32e76e34f5f8, type: 2}
+  canGiveItem: 1
+  item: {fileID: 11400000, guid: 4b26290b170f2dd4dadfd91a1bc74a31, type: 2}
+  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
+  inkJSON: {fileID: 4900000, guid: 644cd312c4381f944b28b5ecf2b28e40, type: 3}
 --- !u!1 &525025849
 GameObject:
   m_ObjectHideFlags: 0
@@ -3479,7 +3481,6 @@ Transform:
   - {fileID: 483029042}
   - {fileID: 1722633590}
   - {fileID: 1534676495}
-  - {fileID: 428207891}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9143,6 +9144,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 0}
   soundClip: {fileID: 0}
+--- !u!1 &1583468022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1583468023}
+  m_Layer: 5
+  m_Name: PuzzleUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1583468023
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583468022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 385592086}
+  m_Father: {fileID: 1638098949}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1632401073
 GameObject:
   m_ObjectHideFlags: 0
@@ -9375,7 +9413,7 @@ RectTransform:
   - {fileID: 1155578044}
   - {fileID: 457902474}
   - {fileID: 47555244}
-  - {fileID: 385592086}
+  - {fileID: 1583468023}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9509,13 +9547,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5956b6a77767d948bd29cbce567013e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInteracting: 0
   playerInventory: {fileID: 11400000, guid: 727146c40c145b84bbcd32e76e34f5f8, type: 2}
-  canGiveItems: 0
+  canGiveItem: 0
   item: {fileID: 0}
   soundClip: {fileID: 8300000, guid: da09e43aa91c9ad4885d042d177c1bb0, type: 3}
   inkJSON: {fileID: 4900000, guid: 82e69601d19b98f4bb66265b45486402, type: 3}
-  isInteracting: 0
-  endDialogueText: {fileID: 4900000, guid: 01a5e9264f272e848bfe02e8c9f45498, type: 3}
+  endDialogueText: {fileID: 4900000, guid: f671899113b2fb140aa78295f62fdb4b, type: 3}
 --- !u!1 &1722633589
 GameObject:
   m_ObjectHideFlags: 0
@@ -9927,7 +9965,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56027391b58c93c4c9401b5879170aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameRoom: {fileID: 1336336724}
+  MainRoom: {fileID: 1336336724}
+  PuzzleRoom: {fileID: 525025849}
+  PuzzleUI: {fileID: 1583468022}
   inventory: {fileID: 11400000, guid: 727146c40c145b84bbcd32e76e34f5f8, type: 2}
   inventoryUI: {fileID: 47555243}
 --- !u!4 &1821809063
@@ -9989,6 +10029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 631e0dc145e25694583c8b43b94f7f89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadGlobalsJSON: {fileID: 4900000, guid: 7bb562af8d9e10345bc7c4ab4bd21e97, type: 3}
   textSpeed: 0.03
   textContainer: {fileID: 480994479}
   dialogueBox: {fileID: 457902473}
@@ -10350,6 +10391,7 @@ Transform:
   - {fileID: 1169979471}
   - {fileID: 28582042}
   - {fileID: 1542881745}
+  - {fileID: 428207891}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
