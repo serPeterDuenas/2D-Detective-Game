@@ -8,12 +8,12 @@ public class Interactive : MonoBehaviour
     [Header("To check if it is this object that is being interacted with")]
     [SerializeField] protected bool isInteracting = false;
 
-    [Header("Reference to PlayerInventory")]
-    [SerializeField] protected InventoryObject playerInventory;
+   // [Header("Reference to PlayerInventory")]
+    //[SerializeField] protected InventoryObject playerInventory;
 
     [Header("Item, if any")]
     [SerializeField] protected bool canGiveItem = false;
-    [SerializeField] protected ItemObject item;
+    [SerializeField] protected Item1 item;
 
 
 
@@ -48,7 +48,9 @@ public class Interactive : MonoBehaviour
         //Debug.Log("calling GiveItem from default class");
         if (canGiveItem)
         {
-            playerInventory.AddItem(item, 1);
+            InventoryManager.instance.AddItem(item);
+
+            //playerInventory.AddItem(item, 1);
            // Debug.Log("give item from default class");
             canGiveItem = false;
             IncrementItem();
@@ -61,7 +63,8 @@ public class Interactive : MonoBehaviour
     // If this interactive object gives an item ,then increment the GameManager
     private void IncrementItem()
     {
-        GameManager.instance.IncrementItemsAdded();
+       GameManager.instance.IncrementItemsAdded();
+        Debug.Log(GameManager.instance.ItemsCollected);
     }
 
 }
