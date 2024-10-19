@@ -22,7 +22,12 @@ public class DetectiveDialogue : Interactive, Interactable
 
     void Update()
     {
-
+        if (DialogueManager.instance.endOfDialogue)
+        {
+            isInteracting = false;
+        }
+        else
+            return;
 
         // waiting to listen for player choice with dictionary key
         // endingChoice

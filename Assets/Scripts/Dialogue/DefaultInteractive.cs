@@ -6,6 +6,8 @@ public class DefaultInteractive : Interactive, Interactable
 {
     void Update()
     {
+        //Debug.Log(DialogueManager.instance.endOfDialogue);
+
         //Debug.Log(canGiveItem);
         if (DialogueManager.instance.endOfDialogue && isInteracting)
         {
