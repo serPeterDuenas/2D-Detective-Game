@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 1f;
 
+    // this is an odd way to do it, but this just stops player input when a condition is met
+    private bool canStopPlayer = false;
 
     // Movement fields
     private Rigidbody2D rb;
@@ -25,25 +27,32 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // if there is no dialogue playing, then get input
-        if (!DialogueManager.instance.dialogueIsPlaying)
+        // Or if inventory is not open, then get input
+        if (!DialogueManager.instance.dialogueIsPlaying && !InventoryManager.instance.inventoryOpen)
         {
-            inputHorizontal = Input.GetAxisRaw("Horizontal");
-            inputVertical = Input.GetAxisRaw("Vertical");
-
-            if (inputHorizontal > 0 && facingLeft)
-            {
-                Flip();
-            }
-            if (inputHorizontal < 0 && !facingLeft)
-            {
-                Flip();
-            }
+            GetInput();
         }
         else
             return;
     }
 
- 
+
+    private void GetInput()
+    {
+        inputHorizontal = Input.GetAxisRaw("Horizontal");
+        inputVertical = Input.GetAxisRaw("Vertical");
+
+        if (inputHorizontal > 0 && facingLeft)
+        {
+            Flip();
+        }
+        if (inputHorizontal < 0 && !facingLeft)
+        {
+            Flip();
+        }
+
+        canStopPlayer = false;
+    } 
 
     // Movement for the player
     private void FixedUpdate()

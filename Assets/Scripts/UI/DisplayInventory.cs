@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DisplayInventory : MonoBehaviour
 {
     public InventoryObject inventory;
+
+    [Header("Description Text")]
+    [SerializeField] private TextMeshProUGUI descText;
 
     [SerializeField] private int X_START;
     [SerializeField] private int X_SPACE_BETWEEN_ITEMS;
@@ -17,6 +21,7 @@ public class DisplayInventory : MonoBehaviour
     void Start()
     {
         CreateDisplay();
+        descText.text = string.Empty;
     }
 
     // Update is called once per frame

@@ -181,7 +181,7 @@ public class DialogueManager : MonoBehaviour
     IEnumerator ExitDialogueMode()
     {
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForEndOfFrame();
         print("exiting dialogue");
         // As a way for outside classes to know if dialogue has ended
         // resets the field

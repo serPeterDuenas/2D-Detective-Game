@@ -7,44 +7,52 @@ using static Unity.VisualScripting.Member;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Holds GameObjects of the play room that is active/to be active")]
     [SerializeField] private GameObject MainRoom;
     [SerializeField] private GameObject PuzzleRoom;
     [SerializeField] private GameObject PuzzleUI;
 
+    [Header("The # of items necessary to progress the game")]
+    [SerializeField] private int totalItemsNeeded;
     public bool AllItemsCollected { get; private set; }
-    public static int ItemsCollected { get; private set; } = 0;
+    public int ItemsCollected { get; private set; }
 
     public static GameManager instance { get; private set; }
 
 
-    // the inventory for the player;
-    [SerializeField] private InventoryObject inventory;
-
-    [SerializeField] private GameObject inventoryUI;
-
-    private bool inventoryOpen = false;
+   
 
 
     // delegate for when all items have been collected
     //public delegate void OnItemsCollected();
     public event Action OnItemsCollected;
 
-    void Start()
+    private void Awake()
     {
-        inventoryUI.SetActive(false);
+        //gatheredAllItems = false;
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
+
+    }
+
+    private void Start()
+    {
+        ItemsCollected = 0;
     }
 
 
     void Update()
     {
-        // if input pressed and also inv not already open, then open
-        if (InputManager.instance.GetInventoryPressed())
-        {
+       
 
-            SetInventoryActive();
-        }
-
-        if(ItemsCollected == 2)
+        // this has to get updated
+        if(ItemsCollected == totalItemsNeeded)
         {
             SetAllItemsCollected();
         }
@@ -74,45 +82,12 @@ public class GameManager : MonoBehaviour
     }
 
 
-    // Perhaps pause time when inventory is open
-    private void SetInventoryActive()
-    {
-        // If already open, then close
-        if (inventoryOpen == true)
-        {
-            inventoryUI.SetActive(false);
-            inventoryOpen = false;
-        }
-        // Otherwise, if not open then open the panel
-        else if (inventoryOpen == false)
-        {
-            inventoryUI.SetActive(true);
-            inventoryOpen = true;
-        }
-    }
 
 
 
 
-    private void Awake()
-    {
-        //gatheredAllItems = false;
-        if (instance != null && instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            instance = this;
-        }
-
-    }
      
    
 
 
-    private void OnApplicationQuit()
-    {
-        inventory.Container.Clear();
-    }
 }
