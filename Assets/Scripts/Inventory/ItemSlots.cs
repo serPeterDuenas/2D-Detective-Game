@@ -21,7 +21,7 @@ public class ItemSlots : MonoBehaviour, IPointerClickHandler
     [SerializeField] private Image itemDescImage;
     [SerializeField] private TextMeshProUGUI itemDescName;
     [SerializeField] private TextMeshProUGUI itemDescFullText;
-
+    //[SerializeField] private Image emptySprite;
 
     public GameObject selectedShader;
     public bool thisItemSelected;
