@@ -11641,7 +11641,7 @@ MonoBehaviour:
   MainRoom: {fileID: 1336336724}
   PuzzleRoom: {fileID: 525025849}
   PuzzleUI: {fileID: 1583468022}
-  totalItemsNeeded: 8
+  totalItemsNeeded: 2
 --- !u!4 &1821809063
 Transform:
   m_ObjectHideFlags: 0
