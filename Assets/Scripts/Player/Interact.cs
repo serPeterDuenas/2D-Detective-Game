@@ -22,6 +22,7 @@ public class Interact : MonoBehaviour
         {
             if (playerInRange && !DialogueManager.instance.dialogueIsPlaying)
             {
+                
                 // grabs InputManager's instance, and listens for if the input for interact was pressed
                 if (InputManager.instance.GetInteractPressed())
                 {
