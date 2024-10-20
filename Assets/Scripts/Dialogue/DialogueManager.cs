@@ -6,6 +6,11 @@ using Ink.Runtime;
 using UnityEngine.EventSystems;
 using Ink.UnityIntegration;
 
+
+// TODO: Expand this so more characters and their color text is accounted for
+// otherwise, this all works
+
+
 public class DialogueManager : MonoBehaviour
 {
     // var for the load_globals.ink JSON
@@ -13,9 +18,12 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextAsset loadGlobalsJSON;
 
     [Header("Dialogue UI")]
-    [SerializeField] private float textSpeed = 0.07f;
-    [SerializeField] private TextMeshProUGUI textContainer;
+    [SerializeField] private float textSpeed = 0.04f;
+    [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private TextMeshProUGUI speakerNameText;
     [SerializeField] private GameObject dialogueBox;
+    [SerializeField] private GameObject continueText;
+    [SerializeField] private GameObject choiceBoxes;
 
 
     [Header("Choices UI")]
@@ -26,12 +34,18 @@ public class DialogueManager : MonoBehaviour
 
     private Story currentStory;
     private DialogueVariables dialogueVariables;
+    private Coroutine currentCoroutine;
+    private bool canContinueNextLine = false;
 
     public static DialogueManager instance { get; private set; }
     public bool dialogueIsPlaying { get; private set; }
     public bool endOfDialogue { get;  set; }
 
-    
+
+    private const string SPEAKER_TAG = "speaker";
+    private const string DIAGCOLOR_TAG = "diag_color";
+    private const string SPEAKERCOLOR_TAG = "speaker_color";
+
 
     private void Awake()
     {
@@ -76,18 +90,13 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
-        //if (endOfDialogue)
-       // {
-        //    Debug.Log("reached end of dialogue");
-       // }
-       // else
-         //   return;
 
 
         // listen for if player pressed "interact" to continue with dialogue
-        if (InputManager.instance.GetSubmitPressed())
+        if (canContinueNextLine
+            && currentStory.currentChoices.Count == 0
+            && InputManager.instance.GetSubmitPressed())
         {
-            //Debug.Log("Pressed 'submit' while in dialogue");
             ContinueDialogue();
         }
 
@@ -105,8 +114,8 @@ public class DialogueManager : MonoBehaviour
 
         dialogueVariables.StartListening(currentStory);
 
-
-        print("entering dialogue");
+        
+        //print("entering dialogue");
 
         ContinueDialogue();
     }
@@ -119,10 +128,18 @@ public class DialogueManager : MonoBehaviour
         if (currentStory.canContinue)
         {
             // set text for current dialogue lines
-            textContainer.text = currentStory.Continue();
+            //textContainer.color = Color.red;
+            if(currentCoroutine != null)
+            {
+                StopCoroutine(currentCoroutine);
+            }
+            currentCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
 
             // diplay choices if there are any
             DisplayChoices();
+
+            // handle tags, specifically to get text color depending on speaker
+            HandleTags(currentStory.currentTags);
         }
         else
         {
@@ -130,6 +147,104 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+
+    private IEnumerator DisplayLine(string line)
+    {
+        dialogueText.text = string.Empty;
+        
+        canContinueNextLine = false;
+        continueText.SetActive(false);
+        choiceBoxes.SetActive(false);
+
+        foreach(char letter in line.ToCharArray())
+        {
+            if(InputManager.instance.GetSubmitPressed()) 
+            {
+                dialogueText.text = line;
+                break;
+            }
+
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(textSpeed);
+        }
+
+        canContinueNextLine = true;
+        continueText.SetActive(true);
+        choiceBoxes.SetActive(true);
+    }
+
+
+    private void HandleTags(List<string> tags)
+    {
+        foreach (string tag in tags) 
+        {
+            string[] splitTag = tag.Split(':');
+            if(splitTag.Length != 2)
+            {
+                Debug.LogError("Invalid tag lengths");
+            }
+            string tagKey = splitTag[0].Trim();
+            string tagValue = splitTag[1].Trim();
+
+
+            switch (tagKey)
+            {
+                case SPEAKER_TAG:
+                    speakerNameText.text = tagValue;
+                    break;
+                case DIAGCOLOR_TAG:
+                    string diagColorText = tagValue;
+                    ParseDialogueTextColor(diagColorText);
+                    Debug.Log("text color=" + tagValue);
+                    break;
+                case SPEAKERCOLOR_TAG:
+                    string speakerColorText = tagValue;
+                    ParseSpeakerTextColor(speakerColorText);
+                    Debug.Log("speaker color=" + tagValue);
+                    break;
+                default:
+                    Debug.LogError("Tag unhandled: " + tag);
+                    break;
+            }
+        }
+    }
+
+
+    // kind of a stupid way to do it, but whatever
+    // overloaded method this one for the speaker text
+    private void ParseSpeakerTextColor(string speakerTextColor)
+    {
+        switch(speakerTextColor)
+        {
+            case "green":
+                speakerNameText.color = Color.green; 
+                break;
+            case "blue":
+                    speakerNameText.color = Color.blue;
+                    break;
+            default:
+                Debug.Log("Default text to white");
+                speakerNameText.color = Color.white; 
+                break;
+        }
+    }
+
+    private void ParseDialogueTextColor(string diagTextColor)
+    {
+        switch (diagTextColor)
+        {
+            case "green":
+                dialogueText.color = Color.green;
+                break;
+            case "blue":
+                dialogueText.color = Color.blue;
+                break;
+            default:
+                Debug.Log("Default text to white");
+                speakerNameText.color = Color.white;
+                break;
+        }
+    }
 
 
     private void DisplayChoices()
@@ -174,7 +289,12 @@ public class DialogueManager : MonoBehaviour
 
     public void MakeChoice(int choiceIndex)
     {
-        currentStory.ChooseChoiceIndex(choiceIndex);
+        if (canContinueNextLine)
+        {
+            currentStory.ChooseChoiceIndex(choiceIndex);
+            InputManager.instance.RegisterSubmitPressed();
+            ContinueDialogue();
+        }
     }
 
 
@@ -182,7 +302,7 @@ public class DialogueManager : MonoBehaviour
     {
 
         yield return new WaitForEndOfFrame();
-        print("exiting dialogue");
+        //print("exiting dialogue");
         // As a way for outside classes to know if dialogue has ended
         // resets the field
         endOfDialogue = true;
@@ -193,7 +313,8 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
 
         dialogueBox.SetActive(false);
-        textContainer.text = string.Empty;
+        dialogueText.text = string.Empty;
+        dialogueText.color = Color.black;
     }
 
 

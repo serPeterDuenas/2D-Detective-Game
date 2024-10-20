@@ -11,7 +11,7 @@ public class DefaultInteractive : Interactive, Interactable
         //Debug.Log(canGiveItem);
         if (DialogueManager.instance.endOfDialogue && isInteracting)
         {
-            Debug.Log("calling give item from DefaultInteractive");
+            //Debug.Log("calling give item from DefaultInteractive");
             GiveItem();
             isInteracting = !isInteracting;
         }

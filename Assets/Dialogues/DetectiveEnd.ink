@@ -7,10 +7,12 @@ INCLUDE Globals.ink
 === main ===
 Do you want to stick around, or start solving the murder?
 
+    + [Stay]
+        -> chosen("Stay")
     + [Solve]
         -> chosen("Solve")
-    + [Solve]
-        -> chosen("Solve")
+    + [Fuck you]
+        -> chosen("Stay")
 
 === chosen(choice) ===
 
