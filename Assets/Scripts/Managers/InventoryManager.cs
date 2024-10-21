@@ -41,7 +41,7 @@ public class InventoryManager : MonoBehaviour
     void Update()
     {
         // if input pressed and also inv not already open, then open
-        if (InputManager.instance.GetInventoryPressed())
+        if (InputManager.instance.GetInventoryPressed() && !DialogueManager.instance.dialogueIsPlaying)
         {
 
             SetInventoryActive();

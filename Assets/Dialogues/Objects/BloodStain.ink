@@ -17,3 +17,6 @@ Yo. I'm Jose. I work security, I do shit. I talk. What's up. Howdy1 #speaker:Jos
 
 
 And I'm Mariano, I talk and shit. Do talking waijsdoikasj whi WEA! #speaker:Mariano #diag_color:purple #speaker_color:purple
+
+
+A new item is in my inventory... #speaker:Detective Felix #diag_color:white #speaker_color:white
