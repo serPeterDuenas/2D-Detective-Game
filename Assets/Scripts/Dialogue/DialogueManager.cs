@@ -195,12 +195,10 @@ public class DialogueManager : MonoBehaviour
                 case DIAGCOLOR_TAG:
                     string diagColorText = tagValue;
                     ParseDialogueTextColor(diagColorText);
-                    Debug.Log("text color=" + tagValue);
                     break;
                 case SPEAKERCOLOR_TAG:
                     string speakerColorText = tagValue;
                     ParseSpeakerTextColor(speakerColorText);
-                    Debug.Log("speaker color=" + tagValue);
                     break;
                 default:
                     Debug.LogError("Tag unhandled: " + tag);
@@ -216,12 +214,27 @@ public class DialogueManager : MonoBehaviour
     {
         switch(speakerTextColor)
         {
-            case "green":
-                speakerNameText.color = Color.green; 
+            case "white":
+                speakerNameText.color = Color.white;
                 break;
-            case "blue":
-                    speakerNameText.color = Color.blue;
-                    break;
+            case "light blue":
+                speakerNameText.color = new Color(0.796f, 0.858f, 0.988f);
+                break;
+            case "orange":
+                speakerNameText.color = new Color(0.89f, 0.627f, 0.4f);
+                break;
+            case "dark green":
+                speakerNameText.color = new Color(0.215f, 0.58f, 0.431f);
+                break;
+            case "green":
+                speakerNameText.color = new Color(0.415f, 0.745f, 0.188f); 
+                break;
+            case "grey":
+                speakerNameText.color = new Color(0.607f, 0.678f, 0.717f);
+                break;
+            case "purple":
+                speakerNameText.color = new Color(0.462f, 0.258f, 0.541f);
+                break;
             default:
                 Debug.Log("Default text to white");
                 speakerNameText.color = Color.white; 
@@ -233,11 +246,26 @@ public class DialogueManager : MonoBehaviour
     {
         switch (diagTextColor)
         {
-            case "green":
-                dialogueText.color = Color.green;
+            case "white":
+                dialogueText.color = Color.white;
                 break;
-            case "blue":
-                dialogueText.color = Color.blue;
+            case "light blue":
+                dialogueText.color = new Color(0.796f, 0.858f, 0.988f);
+                break;
+            case "orange":
+                dialogueText.color = new Color(0.89f, 0.627f, 0.4f);
+                break;
+            case "dark green":
+                dialogueText.color = new Color(0.215f, 0.58f, 0.431f);
+                break;
+            case "green":
+                dialogueText.color = new Color(0.415f, 0.745f, 0.188f);
+                break;
+            case "grey":
+                dialogueText.color = new Color(0.607f, 0.678f, 717f);
+                break;
+            case "purple":
+                dialogueText.color = new Color(0.462f, 0.258f, 0.541f);
                 break;
             default:
                 Debug.Log("Default text to white");
