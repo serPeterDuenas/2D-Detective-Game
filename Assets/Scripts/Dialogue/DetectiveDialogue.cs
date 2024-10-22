@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
 
-public class DetectiveDialogue : Interactive
+public class DetectiveDialogue : Interactive, Interactable
 {
     // Detective specific dialogue, if other Interactives also seem to use this,
     // then I'll add it to parent class
