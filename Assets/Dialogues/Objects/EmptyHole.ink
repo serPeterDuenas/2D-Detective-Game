@@ -1,1 +1,3 @@
-﻿
+Looks like there's a hole in the wall. #speaker:Detective Felix #diag_color:white #speaker_color:white
+
+Looks like the whole wall is starting to crack. I'd better not mess with it...
