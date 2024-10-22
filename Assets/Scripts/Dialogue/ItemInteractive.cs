@@ -10,29 +10,14 @@ public class ItemInteractive : DefaultInteractive
 
     [SerializeField] private int timesInteractedWith = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public override void EnterDialogue()
     {
-        if (isInteracting)
-        {
-            UpdateDialogue();
-        }
-        else
-            return;
-    }
-
-
-    private void UpdateDialogue()
-    {
+        isInteracting = true;
         timesInteractedWith++;
+        DialogueManager.instance.EnterDialogueMode(inkJSON);
 
-        if(timesInteractedWith >= 1)
+        if (timesInteractedWith > 1)
         {
             DialogueManager.instance.EnterDialogueMode(afterTakenItem);
         }
