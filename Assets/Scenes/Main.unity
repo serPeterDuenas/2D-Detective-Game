@@ -5936,9 +5936,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInteracting: 0
-  canGiveItem: 0
-  item: {fileID: 0}
-  soundClip: {fileID: 0}
+  canGiveItem: 1
+  item: {fileID: 11400000, guid: b79b7db298825b54c96692f88333ec2d, type: 2}
+  soundClip: {fileID: 8300000, guid: 6f7d4f96d69cd0e4f80a7d6928a6b17d, type: 3}
   inkJSON: {fileID: 4900000, guid: 644cd312c4381f944b28b5ecf2b28e40, type: 3}
 --- !u!61 &663066164
 BoxCollider2D:
@@ -9289,8 +9289,8 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 0
   item: {fileID: 0}
-  soundClip: {fileID: 0}
-  inkJSON: {fileID: 0}
+  soundClip: {fileID: 8300000, guid: 01e912ce76a8cfc43b9e99cd1ebcfab8, type: 3}
+  inkJSON: {fileID: 4900000, guid: dfe7bd0ca1302df47a7e93eeafc9822d, type: 3}
 --- !u!61 &1037389858
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9451,8 +9451,8 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 0
   item: {fileID: 0}
-  soundClip: {fileID: 0}
-  inkJSON: {fileID: 0}
+  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
+  inkJSON: {fileID: 4900000, guid: 2197caf5f6fb5f24d8d07bebeb6ef63a, type: 3}
 --- !u!61 &1073397918
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11668,8 +11668,8 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 0
   item: {fileID: 0}
-  soundClip: {fileID: 0}
-  inkJSON: {fileID: 0}
+  soundClip: {fileID: 8300000, guid: 1778c2e9ef29da740a9ef31134ac2f57, type: 3}
+  inkJSON: {fileID: 4900000, guid: 6d4de9cd37fad3d43be8a24c9f531799, type: 3}
 --- !u!61 &1444679286
 BoxCollider2D:
   m_ObjectHideFlags: 0

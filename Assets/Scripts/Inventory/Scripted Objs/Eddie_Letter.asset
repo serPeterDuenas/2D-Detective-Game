@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec7a96cfc50e23840af804fd9064a914, type: 3}
+  m_Name: Eddie_Letter
+  m_EditorClassIdentifier: 
+  itemName: Eddie's Letter
+  itemDescription: "The letter is a list of all the grievances Eddie has against
+    Mr. Cruz. Included in the letter is his acusation of Eddie's watch being stolen
+    from the office, and the only person that would do such a thing is Mr. Cruz.
+    \n\nPossibly a motivation behind the murder of Mr. Cruz."
+  sprite: {fileID: 434678, guid: 08630a3c29698774195b543971440bc1, type: 3}

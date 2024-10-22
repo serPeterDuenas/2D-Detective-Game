@@ -1,0 +1,3 @@
+Some old, peeling paint on the wall. #speaker:Detective Felix #diag_color:white #speaker_color:white
+
+Not too sure if anyone is going to be smiling for a while after today...
