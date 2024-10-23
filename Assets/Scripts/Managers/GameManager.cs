@@ -23,10 +23,6 @@ public class GameManager : MonoBehaviour
    
 
 
-    // delegate for when all items have been collected
-    //public delegate void OnItemsCollected();
-    public event Action OnItemsCollected;
-
     private void Awake()
     {
         //gatheredAllItems = false;

@@ -1,4 +1,4 @@
-This is where the murder occured. #speaker:Detective Felix #diag_color:white #speaker_color:white
+This is where the murder occured. #speaker:Detective Felix #text_color:white
 
 Quite a bloody mess, all things considered. 
 

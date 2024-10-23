@@ -23,7 +23,6 @@ public class DialogueVariables
             // each loop grabs the compiled Story variables with the string name, adds it to Dictionary
             Ink.Runtime.Object value = globlaVariablesStory.variablesState.GetVariableWithName(name);
             variables.Add(name, value);
-            Debug.Log("Initalize global dialogue varialbe: " + name + " = " + value);
         }
     }
 

@@ -7,8 +7,6 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 1f;
 
-    // this is an odd way to do it, but this just stops player input when a condition is met
-    private bool canStopPlayer = false;
 
     // Movement fields
     private Rigidbody2D rb;
@@ -50,8 +48,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
-
-        canStopPlayer = false;
     } 
 
     // Movement for the player

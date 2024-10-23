@@ -1,5 +1,4 @@
-A hole in the wall... I think I see something sticking out of it. #speaker:Detective Felix #diag_color:white #speaker_color:white
-
+A hole in the wall... I think I see something sticking out of it. #speaker:Detective Felix #text_color:white
 -> main
 
 === main ===

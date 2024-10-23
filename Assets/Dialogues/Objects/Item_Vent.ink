@@ -1,4 +1,4 @@
-A vent, and it looks like there's something in there... #speaker:Detective Felix #diag_color:white #speaker_color:white
+A vent, and it looks like there's something in there... #speaker:Detective Felix #text_color:white
 
 -> main
 

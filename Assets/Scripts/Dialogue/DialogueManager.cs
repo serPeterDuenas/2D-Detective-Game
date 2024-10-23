@@ -43,8 +43,8 @@ public class DialogueManager : MonoBehaviour
 
 
     private const string SPEAKER_TAG = "speaker";
-    private const string DIAGCOLOR_TAG = "diag_color";
-    private const string SPEAKERCOLOR_TAG = "speaker_color";
+    private const string TEXTCOLOR_TAG = "text_color";
+    //private const string SPEAKERCOLOR_TAG = "speaker_color";
 
 
     private void Awake()
@@ -190,16 +190,10 @@ public class DialogueManager : MonoBehaviour
             switch (tagKey)
             {
                 case SPEAKER_TAG:
-                    string speakerName = tagValue;
-                    ParseSpeakerName(speakerName);
+                    ParseSpeakerName(tagValue);
                     break;
-                case DIAGCOLOR_TAG:
-                    string diagColorText = tagValue;
-                    ParseDialogueTextColor(diagColorText);
-                    break;
-                case SPEAKERCOLOR_TAG:
-                    string speakerColorText = tagValue;
-                    ParseSpeakerTextColor(speakerColorText);
+                case TEXTCOLOR_TAG:
+                    ParseTextColor(tagValue);
                     break;
                 default:
                     Debug.LogError("Tag unhandled: " + tag);
@@ -230,66 +224,42 @@ public class DialogueManager : MonoBehaviour
 
     // kind of a stupid way to do it, but whatever
     // overloaded method this one for the speaker text
-    private void ParseSpeakerTextColor(string speakerTextColor)
+    private void ParseTextColor(string textColor)
     {
-        switch(speakerTextColor)
+        switch (textColor)
         {
             case "white":
                 speakerNameText.color = Color.white;
-                break;
-            case "light blue":
-                speakerNameText.color = new Color(0.796f, 0.858f, 0.988f);
-                break;
-            case "orange":
-                speakerNameText.color = new Color(0.89f, 0.627f, 0.4f);
-                break;
-            case "dark green":
-                speakerNameText.color = new Color(0.215f, 0.58f, 0.431f);
-                break;
-            case "green":
-                speakerNameText.color = new Color(0.415f, 0.745f, 0.188f); 
-                break;
-            case "grey":
-                speakerNameText.color = new Color(0.607f, 0.678f, 0.717f);
-                break;
-            case "purple":
-                speakerNameText.color = new Color(0.62f, 0.3f, 0.6f);
-                break;
-            default:
-                Debug.Log("Default text to white");
-                speakerNameText.color = Color.white; 
-                break;
-        }
-    }
-
-    private void ParseDialogueTextColor(string diagTextColor)
-    {
-        switch (diagTextColor)
-        {
-            case "white":
                 dialogueText.color = Color.white;
                 break;
             case "light blue":
+                speakerNameText.color = new Color(0.796f, 0.858f, 0.988f);
                 dialogueText.color = new Color(0.796f, 0.858f, 0.988f);
                 break;
             case "orange":
+                speakerNameText.color = new Color(0.89f, 0.627f, 0.4f);
                 dialogueText.color = new Color(0.89f, 0.627f, 0.4f);
                 break;
             case "dark green":
+                speakerNameText.color = new Color(0.215f, 0.58f, 0.431f);
                 dialogueText.color = new Color(0.215f, 0.58f, 0.431f);
                 break;
             case "green":
+                speakerNameText.color = new Color(0.415f, 0.745f, 0.188f);
                 dialogueText.color = new Color(0.415f, 0.745f, 0.188f);
                 break;
             case "grey":
-                dialogueText.color = new Color(0.607f, 0.678f, 717f);
+                speakerNameText.color = new Color(0.607f, 0.678f, 0.717f);
+                dialogueText.color = new Color(0.607f, 0.678f, 0.717f);
                 break;
             case "purple":
+                speakerNameText.color = new Color(0.62f, 0.3f, 0.6f);
                 dialogueText.color = new Color(0.62f, 0.3f, 0.6f);
                 break;
             default:
                 Debug.Log("Default text to white");
                 speakerNameText.color = Color.white;
+                dialogueText.color = Color.white;
                 break;
         }
     }

@@ -1,4 +1,4 @@
-Lockers, and I think I see something inside on of them... #speaker:Detective Felix #diag_color:white #speaker_color:white
+Lockers, and I think I see something inside on of them... #speaker:Detective Felix #text_color:white
 
 -> main
 
