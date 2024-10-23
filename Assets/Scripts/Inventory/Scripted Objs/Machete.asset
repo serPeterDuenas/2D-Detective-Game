@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Machete
   m_EditorClassIdentifier: 
   itemName: Machete
-  itemDescription: 'A bloody machete. Found inside of a vent near the offices.
+  itemDescription: 'A bloody machete. I found this inside of a vent near the offices.
+    Somebody was obviously trying to hide it in there, considering that the screws
+    of the vent were barely hanging on.
 
 
-    Possibly
-    a weapon used in the murder of Mr. Cruz.'
+    This could be a weapon used in the
+    murder of Mr. Cruz.'
   sprite: {fileID: -734222994, guid: 08630a3c29698774195b543971440bc1, type: 3}

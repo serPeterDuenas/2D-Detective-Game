@@ -9,8 +9,7 @@ public class InventoryManager : MonoBehaviour
 
 
     [Header("Player's inventory and UI")]
-    // the inventory for the player;
-    [SerializeField] private InventoryObject inventory;
+    // the inventory for the player
 
     [SerializeField] private GameObject inventoryUI;
 
@@ -94,6 +93,6 @@ public class InventoryManager : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        inventory.Container.Clear();
+        //inventory.Container.Clear();
     }
 }

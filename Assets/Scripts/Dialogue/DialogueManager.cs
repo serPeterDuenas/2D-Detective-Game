@@ -24,7 +24,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private GameObject continueText;
     [SerializeField] private GameObject choiceBoxes;
-
+    [SerializeField] private GameObject speakerPanel;
 
     [Header("Choices UI")]
     // array of gameobjects to store the buttons on the Canvas
@@ -190,7 +190,8 @@ public class DialogueManager : MonoBehaviour
             switch (tagKey)
             {
                 case SPEAKER_TAG:
-                    speakerNameText.text = tagValue;
+                    string speakerName = tagValue;
+                    ParseSpeakerName(speakerName);
                     break;
                 case DIAGCOLOR_TAG:
                     string diagColorText = tagValue;
@@ -204,6 +205,25 @@ public class DialogueManager : MonoBehaviour
                     Debug.LogError("Tag unhandled: " + tag);
                     break;
             }
+        }
+    }
+
+
+    private void ParseSpeakerName(string speakerName)
+    {
+        if (speakerName == "none")
+        { speakerNameText.text = string.Empty; }
+        else
+        { speakerNameText.text = speakerName; }
+
+        switch (speakerName) 
+        {
+            case "none":
+                speakerPanel.SetActive(false);
+                break;
+            default:
+                speakerPanel.SetActive(true);
+                break;
         }
     }
 

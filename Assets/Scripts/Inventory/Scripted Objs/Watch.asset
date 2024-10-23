@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Watch
   m_EditorClassIdentifier: 
   itemName: Watch
-  itemDescription: 'This is Mariano''s watch. It was found inside of Mr. Cruz''s
-    locker. Detective Miguel wears the very same watch. It''s not too expensive...
+  itemDescription: 'A watch. I found it inside of the lockers alongside an unfinished
+    poem addressed to Bianca. Detective Miguel wears the exact same watch, as this
+    one, and it''s honestly not very expensive. Even I could buy something tacky
+    like this...
 
 
-    Could
-    be a motivation behind Mr. Cruz''s murder.'
+    This could possibly be a motivation behind Mr. Cruz''s murder.'
   sprite: {fileID: 734215699, guid: 08630a3c29698774195b543971440bc1, type: 3}

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Baseball_Bat
   m_EditorClassIdentifier: 
   itemName: Baseball Bat
-  itemDescription: 'A baseball bat. It''s rather old. Found this hidden inside of
-    a hole in the wall.
+  itemDescription: 'A baseball bat. I found this inside of a hole in the wall. It''s
+    old, very old. Not many good reasons for a bat to be hiding around in the building.
 
 
-    One of the weapons possibly used in the murder of Mr.
-    Cruz'
+    Probably
+    one of the weapons used in the murder of Mr. Cruz.'
   sprite: {fileID: -1391207010, guid: 08630a3c29698774195b543971440bc1, type: 3}
