@@ -31,7 +31,7 @@ public class Interactive : MonoBehaviour
 
     public virtual void EnterDialogue()
     {
-        DialogueManager.instance.EnterDialogueMode(inkJSON);
+        DialogueManager.instance.EnterDialogueMode(inkJSON, this);
        // Debug.Log("Enter dialogue from Default script");
 
         isInteracting = true;
@@ -46,7 +46,7 @@ public class Interactive : MonoBehaviour
     }
 
 
-    protected virtual void GiveItem()
+    public virtual void GiveItem()
     {
         //Debug.Log("calling GiveItem from default class");
         if (canGiveItem)

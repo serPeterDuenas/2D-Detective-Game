@@ -30,7 +30,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void EnterDialogue()
     {
-        DialogueManager.instance.EnterDialogueMode(inkJSON);
+        //DialogueManager.instance.EnterDialogueMode(inkJSON);
     }
 
 }

@@ -41,9 +41,11 @@ public class DialogueManager : MonoBehaviour
     public bool dialogueIsPlaying { get; private set; }
     public bool endOfDialogue { get;  set; }
 
+    private Interactive interacitve;
 
     private const string SPEAKER_TAG = "speaker";
     private const string TEXTCOLOR_TAG = "text_color";
+    private const string ACTION_TAG = "action";
     //private const string SPEAKERCOLOR_TAG = "speaker_color";
 
 
@@ -104,8 +106,9 @@ public class DialogueManager : MonoBehaviour
 
 
     // Begins dialogue, taking in a JSON TextAsset to create a new Story
-    public void EnterDialogueMode(TextAsset inkJSON)
+    public void EnterDialogueMode(TextAsset inkJSON, Interactive _interactive)
     {
+        interacitve = _interactive;
         // creates an instance of Story using TextAsset argument
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
@@ -195,6 +198,9 @@ public class DialogueManager : MonoBehaviour
                 case TEXTCOLOR_TAG:
                     ParseTextColor(tagValue);
                     break;
+                case ACTION_TAG:
+                    ParseAction(tagValue);
+                    break;
                 default:
                     Debug.LogError("Tag unhandled: " + tag);
                     break;
@@ -202,6 +208,15 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+
+    private void ParseAction(string actionTag)
+    {
+        if(actionTag == "giveItem")
+        {
+            //interacitve.
+            //DefaultInteractive
+        }
+    }
 
     private void ParseSpeakerName(string speakerName)
     {

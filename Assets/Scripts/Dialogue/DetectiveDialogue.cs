@@ -68,12 +68,12 @@ public class DetectiveDialogue : Interactive, Interactable
         isInteracting = true;
         if (!endingReady)
         {
-            DialogueManager.instance.EnterDialogueMode(inkJSON);
+            DialogueManager.instance.EnterDialogueMode(inkJSON, this);
             //dialogueEntered++;
         }
         else if (endingReady)
         {
-            DialogueManager.instance.EnterDialogueMode(endDialogueText);
+            DialogueManager.instance.EnterDialogueMode(endDialogueText, this);
 
            
          

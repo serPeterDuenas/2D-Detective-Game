@@ -41,11 +41,11 @@ public class ItemInteractive : Interactive, Interactable
     {
         isInteracting = true;
         timesInteractedWith++;
-        DialogueManager.instance.EnterDialogueMode(inkJSON);
+        DialogueManager.instance.EnterDialogueMode(inkJSON, this);
 
         if (timesInteractedWith > 1)
         {
-            DialogueManager.instance.EnterDialogueMode(afterTakenItem);
+            DialogueManager.instance.EnterDialogueMode(afterTakenItem, this);
         }
     }
 }
