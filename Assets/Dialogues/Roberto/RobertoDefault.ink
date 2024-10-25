@@ -4,9 +4,7 @@ VAR hasPinkSlip = 0
 
 Hello. I am Detective Felix, and I wanted to ask you a few questions about the murder. #speaker:Detective Felix #text_color:white
 Sure. I'd be glad to help out in anyway. You can ask me anything. #speaker:none #text_color:green
-For as shocking this whole sitaution is, I'm rather clear in the mind.
-I can't say the same for a lot of the other folk here, as I'm sure you've either already seen or will see. 
-Other than that, I'm as open as a book. 
+I'm as open as a book. 
 Perfect. #speaker:Detective Felix #text_color:white
 I'll start by first getting your name.
 Roberto.  #speaker:Roberto #text_color:green
@@ -25,7 +23,9 @@ Can you tell me about... #speaker:Detective Felix #text_color:white
 
     
 + [Mr. Cruz]
-    -> MrCruz
+    I wanted to ask you a few questions regarding Mr. Cruz, if that's alright with you. #speaker:Detective Felix #text_color:white
+    Fine by me. #speaker:Roberto #text_color:green
+    -> CruzChoices
 
 + [Leave]
     -> Leave
@@ -35,10 +35,10 @@ Can you tell me about... #speaker:Detective Felix #text_color:white
 === 7AM ===
     At 7:00 am...? #speaker:Roberto #text_color:green
     At that time I would've been inside of the offices finishing up with my morning routine. 
-    My shift starts at 6:30, and the first hour of work is spent logging into the computer here.
-    The computers here are all piece of junk, I'll tell ya.
-    Takes almost 10 minutes just to boot up. 
-    Once it's up and going, I check and respond to any emails, and take a look at the day's objectives. 
+    My shift starts at 6:30, and the first hour of work is spent logging into my computer.
+    All these computers here, they're all just a pile of junk.
+    Takes almost 10 minutes just for it to boot up, but once it's up and going, I check and respond to any emails, look over the day's objectives...
+    Boring office stuff, Detective.
     // If I use rich text, use "7:12 AM" as italiczed
     By the time I get done with that, I do my morning walk around the warehouse. Today I happeend to be done at 7:12 am.
     That's when I saw the crowd of people gathering around Door 102, and knew something horrible had just happened. 
@@ -46,7 +46,8 @@ Can you tell me about... #speaker:Detective Felix #text_color:white
     If it's any help at all, I can tell you with certainty that only a few people would've been near Door 102 so early in the morning. 
     That door is usually reserved for afternoon loads, and that leaves only maintenance people and possibly a few lazy-workers wandering near it. 
     If I were you, I'd probably want to ask around for anyone who fits the bill.
-    Sure. I'll keep that in mind. #speaker:Detective Felix text_color:white
+    
+    Sure. I'll keep that in mind. #speaker:Detective Felix #text_color:white
     -> MainChoices
     
     
@@ -56,30 +57,30 @@ Can you tell me about... #speaker:Detective Felix #text_color:white
      
 
 === WarehouseChoices ===
-About the warehouse... #speaker:Detective Felix text_color:white
+About the warehouse... #speaker:Detective Felix #text_color:white
     +[Yourself]
-    What do you do here at the warehouse? #speaker:Detective Felix text_color:white
+    What do you do here at the warehouse? #speaker:Detective Felix #text_color:white
     -> WarehouseYourself
     
     +[People]
-    What type of people work here? #speaker:Detective Felix text_color:white
+    What type of people work here? #speaker:Detective Felix #text_color:white
     -> WarehousePeople
     
     +[History]
-     Tell me a little bit about the history of this place. #speaker:Detective Felix text_color:white
+     Tell me a little bit about the history of this place. #speaker:Detective Felix #text_color:white
     -> WarehouseHistory
 + [Back]
-That's all I have to ask about the warehouse.  #speaker:Detective Felix text_color:white
+That's all I have to ask about the warehouse.  #speaker:Detective Felix #text_color:white
     -> MainChoices 
     
     
 
 === WarehouseYourself === 
-I'm one of the three managers here. #speaker:Roberto #text_color:green
+I'm one of the managers here. #speaker:Roberto #text_color:green
 The work isn't great, but it's not too bad either.
 Being here is certainly a saving grace compared to the alternatives. 
 Not many jobs here on this small island of ours, right Detective?
-Sure. A lot of people would say the same thing. #speaker:Detective Felix text_color:white
+Sure. A lot of people would say the same thing. #speaker:Detective Felix #text_color:white
 Do you commute far to get here? Ever come in late to work?
 Not too far. I live out in Barrigada. #speaker:Roberto #text_color:green
 That's why I'm never late... except for when there's a ton of overgrowth on my driveway.
@@ -102,22 +103,16 @@ Most people here, like I said, are just working for pay.
 -> WarehouseChoices
 
 === WarehouseHistory === 
-Well, I'm not really an historian, but the building started construction about five years ago. #speaker:Roberto #text_color:green
+Well, the building started construction about five years ago. #speaker:Roberto #text_color:green
 Mr. Cruz bought up some land from the Cepeda and Rosario families. 
 They'd always been wanting to leave and go to America, so I guess that's why everything managed to go through. 
 Three years ago, the warehouse fully opened, and I got my start on the very first day.
 I was just an associate, but made my way up, and now I'm one of the three managers here.
 Hopefully that was helpful. Don't see how that's important to Mr. Cruz's murder, Detective.
 If that's not too offensive to say.
-Just want to make sure I get the full picture #speaker:Detective Felix text_color:white
+Just want to make sure I get the full picture #speaker:Detective Felix #text_color:white
 -> WarehouseChoices
 
-
-    
-=== MrCruz ===
-    I wanted to ask you a few questions regarding Mr. Cruz, if that's alright with you. #speaker:Detective Felix #text_color:white
-    Fine by me. #speaker:Roberto #text_color:green
-    -> CruzChoices
     
     
 
@@ -125,75 +120,112 @@ Just want to make sure I get the full picture #speaker:Detective Felix text_colo
 Could you tell me about... #speaker:Detective Felix #text_color:white
 
     * {!hasPinkSlip} [Your relationship]
-    Tell me more about you and Mr. Cruz's relationship to each other. #speaker:Detective Felix #text_color:white
+    Tell me more about your relationship to Mr. Cruz. #speaker:Detective Felix #text_color:white
     -> CruzRelationshipNOSLIP
 
     + {hasPinkSlip} [Your relationship]
-        Tell me more about you and Mr. Cruz's relationship to each other. #speaker:Detective Felix #text_color:white
+        Tell me more about your relationship to Mr. Cruz. #speaker:Detective Felix #text_color:white
     -> CruzRelationshipYESSLIP
-    + [Mr. Cruz]
-    Tell me a little bit about Mr. Cruz himself. #speaker:Detective Felix #text_color:white
+    + [More on Mr. Cruz]
+    What can you tell me about Mr. Cruz himself? #speaker:Detective Felix #text_color:white
     -> CruzHimself  
     + [Motivations]
-    Would you know if there could be any motivations behind Mr. Cruz's murder. #speaker:Detective Felix #text_color:white
-    Perhaps he upset the wrong people, or maybe the wrong kind of people work here.
+    Any possible any motivations behind Mr. Cruz's murder? #speaker:Detective Felix #text_color:white
     -> Motivations
     + [Back]
-    That's all I have to ask about Mr. Cruz.  #speaker:Detective Felix text_color:white
+    That's all I have to ask about Mr. Cruz.  #speaker:Detective Felix #text_color:white
     -> MainChoices 
 
 
 
 // Dialogue if no item yet
-// This uses Exteranl Function to SetCanGiveItem
 === CruzRelationshipNOSLIP ===
 Me and Mr Cruz? #speaker:Roberto #text_color:green
-Well... if I'm going to be honest with you, Detective, then I'll admit that he and I haven't been on best terms lately.
-It's a multitude of factors. Too much, really, to count.
-I'm here all day, Roberto. #speaker:Detective Felix text_color:white
-Then I suppose I'll tell you about the most relevant things. #speaker:Roberto #text_color:green
+Well... if I'm going to be honest with you, Detective, I'll admit that he and I haven't been on best terms lately.
+It's a multitude of factors. Too much to count.
+I'm here all day. #speaker:Detective Felix #text_color:white
+In that case... #speaker:Roberto #text_color:green
 If others haven't already told you, Mr. Cruz has been known to be very snippy with his fingers. 
-Or to be more blunt: he steals. All the time.
+He steals. All the time.
 I don't know if it's some kind of a mental condition, but he just couldn't help but snatch people's belongings out from under them.
 Nobody was safe from it. 
 Nobody would say anything either since he owns the whole building. 
-He did, however, seem to stay away from the people closest to him. Myself included.
-But that recently changed.
-The heat wave that struck us a couple weeks back put us all over the edge, especially Mr. Cruz. 
-The man went psycho!
-Everyone here, including me, needed to take breaks, get water, stay hydrated. But Mr. Cruz didn't like that.
-He thought I was being lazy, and scolded me in front of everyone. Like a child! 
-I'm not one to want to lose this job, like I already said, there aren't any better options.
-I kept my mouth shut and just listened to his barks.
-Everything seemed to be going fine until, a couple days ago, I came into the office and saw a pink slip on my desk.
-He stopped talking to me completely, too.
-Do you still have the pink slip? #speaker:Detective Felix text_color:white
-Yes, I keep it on me. Why? #speaker:Roberto #text_color:green
-I may need to hold on to it for the investigation. #speaker:Detective Felix text_color:white
-Really? Is that really necessary? #speaker:Roberto #text_color:green
-I didn't do anything wrong, did I?
-No. You didn't do anything wrong, Roberto.#speaker:Detective Felix text_color:white
-This is just for my own investigation, like I said.
-If you insist... #speaker:Roberto #text_color:green
+He did seem to restrain himself when it came to people closest to him.
+But that all changed recently.
+The heat wave from a couple weeks ago was especially tough here in the building since the AC barely works at all. 
+I think the heat must've flipped a switch him.
+The man completely lost his mind!
+Everyone here needed to take plenty of breaks, get water, stay hydrated. But Mr. Cruz didn't like that.
+When he saw me take a breather and sip some water, he scolded me like a child! 
+I would've yelled back at him, but like I already said, there aren't any better jobs on this island. 
+Things stayed tense around him, we stopped talking entirely. 
+Then, three days ago, I came into the office and saw a pink slip on my desk.
+Worst of all, I lost a special coin that's very, very dear to me. 
+I have reason to think Mr. Cruz stole it from me, but I don't have any proof of that.
+I see. #speaker:Detective Felix #text_color:white
+Let me ask you this...
+-> CoinPinkSlip
 
-I have a new item in my inventory. #speaker:Detective Felix text_color:white
-~ hasPinkSlip = true
--> CruzChoices
+
+=== CoinPinkSlip ===
+    * [Coin]
+   Tell me more about this coin of yours. #speaker:Detective Felix #text_color:white
+   It's a sentimental piece. #speaker:Roberto #text_color:green
+   It means a huge lot to me.
+   My father casted it when I was a child. 
+   He gathered all of the jewelry that had been passed down through the generations, and melted it down.
+   He made a coin that has the imprint of the Seal of Guam, and said to me...
+   "Este i espiritu gi todos familian-ta."
+   "Siempre sustieni hao gi i korason-mu."
+    -> CoinPinkSlip
+    * [Pink Slip]
+    Do you still have the pink slip? #speaker:Detective Felix #text_color:white
+    Yes, I keep it on me. Why? #speaker:Roberto #text_color:green
+    I may need to hold on to it for the investigation. #speaker:Detective Felix #text_color:white
+    Really? Is that really necessary? #speaker:Roberto #text_color:green
+    I didn't do anything wrong, did I?
+    No. You didn't do anything wrong, Roberto.#speaker:Detective Felix #text_color:white
+    This is just for my own investigation, like I said.
+    If you insist... #speaker:Roberto #text_color:green #action:giveItem
+
+    I have a new item in my inventory. #speaker:Detective Felix #text_color:white
+    ~ hasPinkSlip = true
+    -> CoinPinkSlip
+* -> CruzChoices
+
 
 
 // Dialogue if item already given
 === CruzRelationshipYESSLIP ===
 Like I already said, me and Mr. Cruz weren't exactly on best terms recently. #speaker:Roberto #text_color:green
+He's gone psycho just a couple weeks ago. 
+We got into some heated talks, particularly him yelling at me. 
+He wants to fire me, and I've got reason to suspect he stole my coin. 
+I don't know what else you want me to say, Detective.
 -> CruzChoices
 
 === CruzHimself ===
-He crushed just too much pussy, man. #speaker:Roberto #text_color:green
-Just too much. Who wouldn't hate him?
+I'd honestly say that for 95% of the time, he's just an ordinary guy. #speaker:Roberto #text_color:green
+Nothing too stand-out about him. He's rich, that's for sure.
+His family's an old mestizo clan.
+His grandfather, Don Crisostomo Cruz, used to own half the ranches up in Yigo before he sold it over to the Americans. 
+From what Mr. Cruz told me himself, his lineage, dating back to the 1700s, once possesed two of the richest haciendas on the island, too...
+...but that was some time ago.
+Other than being an old man and rich as fuck, he was just somebody obsessed with money. 
+Which leads me to that other 5% of the time. 
+He's a kleptomaniac, and I'm not the only one who'd say that openly. 
+The man stole anything that looked even remotely valuable. 
+He'd steal from people here at work, and if anyone spoke out against him, he'd just fire them on the spot. 
+He was also a pervert.
+I won't say too much about it, but there were definitely days where he'd lock himself in his office and close the blinds. 
+What else needs to be said?
 -> CruzChoices
 
+
 === Motivations ===
-Apparently he had the biggest dick in the whole warehouse. #speaker:Roberto #text_color:green
-That might've been a reason... but who knows!?
+As you should already know by now, Mr. Cruz had the nasty habit of stealing from people. #speaker:Roberto #text_color:green
+Who knows, there's a good number of crazies that work here, Detective. He could've stolen from a person who got ticked the wrong way.
+I'd honestly be on the lookout for anyone that shows even the slightest derangement.
 -> CruzChoices
 
 

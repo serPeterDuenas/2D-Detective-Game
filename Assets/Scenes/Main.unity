@@ -708,12 +708,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa8211233f31cf44991a5212a5d62150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 11400000, guid: 727146c40c145b84bbcd32e76e34f5f8, type: 2}
-  descText: {fileID: 1560172439}
-  X_START: -830
-  X_SPACE_BETWEEN_ITEMS: 235
-  Y_SPACE_BETWEEN_ITEMS: 0
-  NUMBER_OF_COLUMNS: 1
 --- !u!1 &58098454
 GameObject:
   m_ObjectHideFlags: 0
@@ -6201,8 +6195,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInteracting: 0
-  canGiveItem: 1
-  item: {fileID: 11400000, guid: f2afc0b1876b4b148ac780674e1befe9, type: 2}
+  canGiveItem: 0
+  item: {fileID: 0}
   soundClip: {fileID: 8300000, guid: 7e5ecff27ffa7104ab2016505f892430, type: 3}
   inkJSON: {fileID: 4900000, guid: da43135b959a6b746b1c812cb391bdf4, type: 3}
 --- !u!61 &684614544
@@ -13942,7 +13936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInteracting: 0
-  canGiveItem: 1
+  canGiveItem: 0
   item: {fileID: 11400000, guid: aa61d01ca1e2eb04bbabbef506bb1811, type: 2}
   soundClip: {fileID: 8300000, guid: 7e5ecff27ffa7104ab2016505f892430, type: 3}
   inkJSON: {fileID: 4900000, guid: 54f7a75697cfcd648a07b3527ed9f499, type: 3}

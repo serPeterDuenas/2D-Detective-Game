@@ -213,8 +213,8 @@ public class DialogueManager : MonoBehaviour
     {
         if(actionTag == "giveItem")
         {
-            //interacitve.
-            //DefaultInteractive
+            interacitve.SetCanGiveItem();
+
         }
     }
 
@@ -260,7 +260,7 @@ public class DialogueManager : MonoBehaviour
                 dialogueText.color = new Color(0.215f, 0.58f, 0.431f);
                 break;
             case "green":
-                speakerNameText.color = new Color(0.415f, 0.745f, 0.188f);
+                speakerNameText.color = new Color(0.315f, 0.645f, 0.148f);
                 dialogueText.color = new Color(0.415f, 0.745f, 0.188f);
                 break;
             case "grey":

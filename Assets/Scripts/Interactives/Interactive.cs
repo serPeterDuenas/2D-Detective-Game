@@ -46,7 +46,7 @@ public class Interactive : MonoBehaviour
     }
 
 
-    public virtual void GiveItem()
+    protected virtual void GiveItem()
     {
         //Debug.Log("calling GiveItem from default class");
         if (canGiveItem)
@@ -60,6 +60,12 @@ public class Interactive : MonoBehaviour
         }
         else
             return;
+    }
+
+
+    public void SetCanGiveItem()
+    {
+        canGiveItem = true;
     }
 
 
