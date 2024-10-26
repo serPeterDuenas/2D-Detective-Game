@@ -268,8 +268,8 @@ public class DialogueManager : MonoBehaviour
                 dialogueText.color = new Color(0.607f, 0.678f, 0.717f);
                 break;
             case "purple":
-                speakerNameText.color = new Color(0.62f, 0.3f, 0.6f);
-                dialogueText.color = new Color(0.62f, 0.3f, 0.6f);
+                speakerNameText.color = new Color(0.67f, 0.255f, 0.83f);
+                dialogueText.color = new Color(0.65f, 0.4f, 0.8f);
                 break;
             default:
                 Debug.Log("Default text to white");

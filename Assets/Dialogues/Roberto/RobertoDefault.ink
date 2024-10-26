@@ -28,7 +28,8 @@ Can you tell me about... #speaker:Detective Felix #text_color:white
     -> CruzChoices
 
 + [Leave]
-    -> Leave
+    That's all I have for now. #speaker:Detective Felix #text_color:white
+    -> END
 
 
 
@@ -229,9 +230,6 @@ I'd honestly be on the lookout for anyone that shows even the slightest derangem
 -> CruzChoices
 
 
-=== Leave ===
-    That's all I have for now. #speaker:Detective Felix #text_color:white
-    -> END
     
     
     
