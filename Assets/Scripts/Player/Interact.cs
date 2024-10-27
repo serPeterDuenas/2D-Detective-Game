@@ -27,7 +27,7 @@ public class Interact : MonoBehaviour
                 if (InputManager.instance.GetInteractPressed())
                 {
                     trigger.EnterDialogue();
-                    trigger.PlaySound();
+                    //trigger.PlaySound();
                 }
             }
         }

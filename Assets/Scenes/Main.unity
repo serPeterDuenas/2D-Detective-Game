@@ -2097,8 +2097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dd019bbf958c74681a62382c673b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 0}
-  soundClip: {fileID: 0}
 --- !u!1 &266832890
 GameObject:
   m_ObjectHideFlags: 0
@@ -2475,8 +2473,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dd019bbf958c74681a62382c673b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 0}
-  soundClip: {fileID: 0}
 --- !u!1 &337522677
 GameObject:
   m_ObjectHideFlags: 0
@@ -2688,7 +2684,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 0
   item: {fileID: 0}
-  soundClip: {fileID: 8300000, guid: 34c4eaf08adf4ed4c89e6d40b610e722, type: 3}
   inkJSON: {fileID: 4900000, guid: b810294dbacc4c441842b5ef0f5cd025, type: 3}
 --- !u!61 &376041286
 BoxCollider2D:
@@ -2915,7 +2910,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 1
   item: {fileID: 11400000, guid: f2afc0b1876b4b148ac780674e1befe9, type: 2}
-  soundClip: {fileID: 8300000, guid: 1778c2e9ef29da740a9ef31134ac2f57, type: 3}
   inkJSON: {fileID: 4900000, guid: 644cd312c4381f944b28b5ecf2b28e40, type: 3}
 --- !u!1 &405979838
 GameObject:
@@ -3026,7 +3020,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 0
   item: {fileID: 0}
-  soundClip: {fileID: 8300000, guid: 34c4eaf08adf4ed4c89e6d40b610e722, type: 3}
   inkJSON: {fileID: 4900000, guid: b810294dbacc4c441842b5ef0f5cd025, type: 3}
 --- !u!61 &414702200
 BoxCollider2D:
@@ -3221,7 +3214,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 0
   item: {fileID: 0}
-  soundClip: {fileID: 8300000, guid: 7e5ecff27ffa7104ab2016505f892430, type: 3}
   inkJSON: {fileID: 4900000, guid: 8d17796cefb98174ca292cc7981b5cfb, type: 3}
 --- !u!61 &446054296
 BoxCollider2D:
@@ -4194,7 +4186,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 0
   item: {fileID: 0}
-  soundClip: {fileID: 0}
   inkJSON: {fileID: 0}
 --- !u!61 &497412067
 BoxCollider2D:
@@ -4510,7 +4501,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 1
   item: {fileID: 11400000, guid: f2afc0b1876b4b148ac780674e1befe9, type: 2}
-  soundClip: {fileID: 8300000, guid: 7e5ecff27ffa7104ab2016505f892430, type: 3}
   inkJSON: {fileID: 4900000, guid: da43135b959a6b746b1c812cb391bdf4, type: 3}
 --- !u!1 &525025849
 GameObject:
@@ -5693,7 +5683,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 1
   item: {fileID: 11400000, guid: f2afc0b1876b4b148ac780674e1befe9, type: 2}
-  soundClip: {fileID: 8300000, guid: 1778c2e9ef29da740a9ef31134ac2f57, type: 3}
   inkJSON: {fileID: 4900000, guid: c74dcac9bf4d0ce47ba7c43e6eaf4995, type: 3}
 --- !u!61 &647275527
 BoxCollider2D:
@@ -5805,8 +5794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dd019bbf958c74681a62382c673b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 0}
-  soundClip: {fileID: 0}
 --- !u!1 &656844446
 GameObject:
   m_ObjectHideFlags: 0
@@ -6043,7 +6030,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 1
   item: {fileID: 11400000, guid: b79b7db298825b54c96692f88333ec2d, type: 2}
-  soundClip: {fileID: 8300000, guid: 6f7d4f96d69cd0e4f80a7d6928a6b17d, type: 3}
   inkJSON: {fileID: 4900000, guid: d772a4b2bb0339b4b9acf25ccadcde68, type: 3}
   afterTakenItem: {fileID: 4900000, guid: 6d4de9cd37fad3d43be8a24c9f531799, type: 3}
   timesInteractedWith: 0
@@ -6133,8 +6119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dd019bbf958c74681a62382c673b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 0}
-  soundClip: {fileID: 0}
 --- !u!114 &679611000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6197,7 +6181,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 0
   item: {fileID: 0}
-  soundClip: {fileID: 8300000, guid: 7e5ecff27ffa7104ab2016505f892430, type: 3}
   inkJSON: {fileID: 4900000, guid: 9bda1cad0985e6a46b65b75769540ee8, type: 3}
 --- !u!61 &684614544
 BoxCollider2D:
@@ -6472,8 +6455,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dd019bbf958c74681a62382c673b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 0}
-  soundClip: {fileID: 0}
 --- !u!114 &784114677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6570,8 +6551,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dd019bbf958c74681a62382c673b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 0}
-  soundClip: {fileID: 0}
 --- !u!1 &861164102
 GameObject:
   m_ObjectHideFlags: 0
@@ -6647,7 +6626,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 1
   item: {fileID: 11400000, guid: d17d9264735f0e34eba4da44fa91faeb, type: 2}
-  soundClip: {fileID: 8300000, guid: 6f7d4f96d69cd0e4f80a7d6928a6b17d, type: 3}
   inkJSON: {fileID: 4900000, guid: edb00144be02aa3409cfba7ab4713c1b, type: 3}
   afterTakenItem: {fileID: 4900000, guid: b810294dbacc4c441842b5ef0f5cd025, type: 3}
   timesInteractedWith: 0
@@ -6700,7 +6678,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 0
   item: {fileID: 0}
-  soundClip: {fileID: 8300000, guid: 34c4eaf08adf4ed4c89e6d40b610e722, type: 3}
   inkJSON: {fileID: 4900000, guid: b810294dbacc4c441842b5ef0f5cd025, type: 3}
 --- !u!61 &869771169
 BoxCollider2D:
@@ -6803,7 +6780,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 1
   item: {fileID: 11400000, guid: ecdfaa9f2a4fa5e4eab175aeecb8ce82, type: 2}
-  soundClip: {fileID: 8300000, guid: 6f7d4f96d69cd0e4f80a7d6928a6b17d, type: 3}
   inkJSON: {fileID: 4900000, guid: 5a50f13533b27e049b4f47466f015277, type: 3}
   afterTakenItem: {fileID: 4900000, guid: 1f66e573bb0e51f48be3f442ccb4c90d, type: 3}
   timesInteractedWith: 0
@@ -9113,7 +9089,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 0
   item: {fileID: 0}
-  soundClip: {fileID: 8300000, guid: 1778c2e9ef29da740a9ef31134ac2f57, type: 3}
   inkJSON: {fileID: 4900000, guid: 1f66e573bb0e51f48be3f442ccb4c90d, type: 3}
 --- !u!61 &980802622
 BoxCollider2D:
@@ -9344,8 +9319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dd019bbf958c74681a62382c673b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 0}
-  soundClip: {fileID: 0}
 --- !u!114 &1028931081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9459,7 +9432,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 0
   item: {fileID: 0}
-  soundClip: {fileID: 8300000, guid: 01e912ce76a8cfc43b9e99cd1ebcfab8, type: 3}
   inkJSON: {fileID: 4900000, guid: dfe7bd0ca1302df47a7e93eeafc9822d, type: 3}
 --- !u!61 &1037389858
 BoxCollider2D:
@@ -9518,8 +9490,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dd019bbf958c74681a62382c673b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 0}
-  soundClip: {fileID: 0}
 --- !u!114 &1071320424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9621,7 +9591,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 0
   item: {fileID: 0}
-  soundClip: {fileID: 8300000, guid: 0c2a0b0b902cb6e4385f019d812755b0, type: 3}
   inkJSON: {fileID: 4900000, guid: 2197caf5f6fb5f24d8d07bebeb6ef63a, type: 3}
 --- !u!61 &1073397918
 BoxCollider2D:
@@ -10868,8 +10837,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dd019bbf958c74681a62382c673b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 0}
-  soundClip: {fileID: 0}
 --- !u!114 &1365125494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10954,8 +10921,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dd019bbf958c74681a62382c673b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 0}
-  soundClip: {fileID: 0}
 --- !u!114 &1368411251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11840,7 +11805,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 0
   item: {fileID: 0}
-  soundClip: {fileID: 8300000, guid: 1778c2e9ef29da740a9ef31134ac2f57, type: 3}
   inkJSON: {fileID: 4900000, guid: 6d4de9cd37fad3d43be8a24c9f531799, type: 3}
 --- !u!61 &1444679286
 BoxCollider2D:
@@ -12126,8 +12090,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dd019bbf958c74681a62382c673b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 0}
-  soundClip: {fileID: 0}
 --- !u!114 &1482947867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13148,8 +13110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dd019bbf958c74681a62382c673b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 0}
-  soundClip: {fileID: 0}
 --- !u!1 &1560172437
 GameObject:
   m_ObjectHideFlags: 0
@@ -13329,6 +13289,148 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1609310244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1609310245}
+  - component: {fileID: 1609310247}
+  - component: {fileID: 1609310246}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1609310245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609310244}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1994389422}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1609310246
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609310244}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1609310247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609310244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fba41b8fa032ae94889c367628957ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1609310246}
 --- !u!1001 &1628101625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13859,7 +13961,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 0
   item: {fileID: 0}
-  soundClip: {fileID: 8300000, guid: 6f7d4f96d69cd0e4f80a7d6928a6b17d, type: 3}
   inkJSON: {fileID: 4900000, guid: 644cd312c4381f944b28b5ecf2b28e40, type: 3}
   endDialogueText: {fileID: 4900000, guid: f671899113b2fb140aa78295f62fdb4b, type: 3}
 --- !u!61 &1639551859
@@ -13938,7 +14039,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 0
   item: {fileID: 11400000, guid: aa61d01ca1e2eb04bbabbef506bb1811, type: 2}
-  soundClip: {fileID: 8300000, guid: 7e5ecff27ffa7104ab2016505f892430, type: 3}
   inkJSON: {fileID: 4900000, guid: 54f7a75697cfcd648a07b3527ed9f499, type: 3}
 --- !u!61 &1643770996
 BoxCollider2D:
@@ -14219,7 +14319,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 1
   item: {fileID: 11400000, guid: f2afc0b1876b4b148ac780674e1befe9, type: 2}
-  soundClip: {fileID: 8300000, guid: 7e5ecff27ffa7104ab2016505f892430, type: 3}
   inkJSON: {fileID: 4900000, guid: da43135b959a6b746b1c812cb391bdf4, type: 3}
 --- !u!61 &1687329335
 BoxCollider2D:
@@ -14459,7 +14558,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 0
   item: {fileID: 0}
-  soundClip: {fileID: 8300000, guid: 7e5ecff27ffa7104ab2016505f892430, type: 3}
   inkJSON: {fileID: 4900000, guid: 297bfcc6b44dd7145a2768f30c47c652, type: 3}
 --- !u!61 &1713938718
 BoxCollider2D:
@@ -14767,7 +14865,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 1
   item: {fileID: 11400000, guid: f2afc0b1876b4b148ac780674e1befe9, type: 2}
-  soundClip: {fileID: 8300000, guid: 7e5ecff27ffa7104ab2016505f892430, type: 3}
   inkJSON: {fileID: 4900000, guid: da43135b959a6b746b1c812cb391bdf4, type: 3}
 --- !u!61 &1731004590
 BoxCollider2D:
@@ -15059,8 +15156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dd019bbf958c74681a62382c673b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 0}
-  soundClip: {fileID: 0}
 --- !u!61 &1797975283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15150,7 +15245,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 0
   item: {fileID: 0}
-  soundClip: {fileID: 8300000, guid: 34c4eaf08adf4ed4c89e6d40b610e722, type: 3}
   inkJSON: {fileID: 4900000, guid: 77750579b29ee7f41b9fea824e1878c9, type: 3}
 --- !u!61 &1808274680
 BoxCollider2D:
@@ -15283,6 +15377,10 @@ MonoBehaviour:
   - {fileID: 943893747}
   - {fileID: 2091233770}
   - {fileID: 1847435613}
+  defaultAudioInfo: {fileID: 11400000, guid: 6cfe74ab1421498458874a6c56c0a25a, type: 2}
+  audioInfos:
+  - {fileID: 11400000, guid: 05f1fe37595a82b47928c8bcc922c39a, type: 2}
+  - {fileID: 11400000, guid: 833bb21b44feb9840b03904a9433e00f, type: 2}
 --- !u!1 &1847435613
 GameObject:
   m_ObjectHideFlags: 0
@@ -15833,6 +15931,7 @@ Transform:
   - {fileID: 1542881745}
   - {fileID: 428207891}
   - {fileID: 1468212999}
+  - {fileID: 1609310245}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16290,8 +16389,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dd019bbf958c74681a62382c673b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 0}
-  soundClip: {fileID: 0}
 --- !u!114 &2029151267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22531,7 +22628,6 @@ MonoBehaviour:
   isInteracting: 0
   canGiveItem: 0
   item: {fileID: 0}
-  soundClip: {fileID: 8300000, guid: 23b1300fddef97b4eb95afee1bacd3ce, type: 3}
   inkJSON: {fileID: 4900000, guid: da43135b959a6b746b1c812cb391bdf4, type: 3}
 --- !u!61 &2044782525
 BoxCollider2D:

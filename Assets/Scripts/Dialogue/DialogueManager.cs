@@ -31,6 +31,11 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject[] choicesSelections;
     private TextMeshProUGUI[] choicesText;
 
+    [Header("Dialogue Audio")]
+    [SerializeField] private DialogueAudioSO defaultAudioInfo;
+    [SerializeField] private DialogueAudioSO[] audioInfos;
+    private DialogueAudioSO currentAudioInfo;
+    private Dictionary<string, DialogueAudioSO> audioInfoDictionary;
 
     private Story currentStory;
     private DialogueVariables dialogueVariables;
@@ -46,6 +51,7 @@ public class DialogueManager : MonoBehaviour
     private const string SPEAKER_TAG = "speaker";
     private const string TEXTCOLOR_TAG = "text_color";
     private const string ACTION_TAG = "action";
+    private const string AUDIO_TAG = "audio";
     //private const string SPEAKERCOLOR_TAG = "speaker_color";
 
 
@@ -62,6 +68,8 @@ public class DialogueManager : MonoBehaviour
         }
 
         dialogueVariables = new DialogueVariables(loadGlobalsJSON);
+
+        currentAudioInfo = defaultAudioInfo;
     }
 
 
@@ -81,6 +89,8 @@ public class DialogueManager : MonoBehaviour
             choicesText[i] = choice.GetComponentInChildren<TextMeshProUGUI>();
             i++;
         }
+
+        InitializeAudioinfoDictionary();
     }
 
 
@@ -104,6 +114,34 @@ public class DialogueManager : MonoBehaviour
 
     }
 
+
+
+    private void InitializeAudioinfoDictionary()
+    {
+        audioInfoDictionary = new Dictionary<string, DialogueAudioSO>();
+        audioInfoDictionary.Add(defaultAudioInfo.id, defaultAudioInfo);
+        foreach(DialogueAudioSO audioInfo in audioInfos)
+        {
+            audioInfoDictionary.Add(audioInfo.id, audioInfo);
+        }
+
+    }
+
+
+    private void SetCurrentAudioInfo(string id)
+    {
+        DialogueAudioSO audioInfo = null;
+        audioInfoDictionary.TryGetValue(id, out audioInfo);
+
+        if (audioInfo != null)
+        {
+            this.currentAudioInfo = audioInfo;
+        }
+        else
+        {
+            Debug.LogWarning("failed to find info for id: " + id);
+        }
+    }
 
     // Begins dialogue, taking in a JSON TextAsset to create a new Story
     public void EnterDialogueMode(TextAsset inkJSON, Interactive _interactive)
@@ -136,13 +174,15 @@ public class DialogueManager : MonoBehaviour
             {
                 StopCoroutine(currentCoroutine);
             }
-            currentCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
+            string nextLine = currentStory.Continue();
+            // handle tags, specifically to get text color depending on speaker
+            HandleTags(currentStory.currentTags);
+            currentCoroutine = StartCoroutine(DisplayLine(nextLine));
 
             // diplay choices if there are any
             DisplayChoices();
 
-            // handle tags, specifically to get text color depending on speaker
-            HandleTags(currentStory.currentTags);
+    
         }
         else
         {
@@ -153,21 +193,25 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator DisplayLine(string line)
     {
-        dialogueText.text = string.Empty;
-        
+        dialogueText.text = line;
+        dialogueText.maxVisibleCharacters = 0;
+        HideChoices();
+
         canContinueNextLine = false;
-        continueText.SetActive(false);
-        choiceBoxes.SetActive(false);
+       
+        //dialogueText.text = line;
+        //dialogueText.maxVisibleCharacters = 0;
 
         foreach(char letter in line.ToCharArray())
         {
             if(InputManager.instance.GetSubmitPressed()) 
             {
-                dialogueText.text = line;
+                dialogueText.maxVisibleCharacters = line.Length;
                 break;
             }
-
-            dialogueText.text += letter;
+            PlayDialogueSound(dialogueText.maxVisibleCharacters);
+            dialogueText.maxVisibleCharacters++;  
+           
             yield return new WaitForSeconds(textSpeed);
         }
 
@@ -176,6 +220,35 @@ public class DialogueManager : MonoBehaviour
         choiceBoxes.SetActive(true);
     }
 
+    private void PlayDialogueSound(int currentDisplayedCharCount)
+    {
+        AudioClip soundCLip = RandomizeClipSelection();
+        int delayFrequency = currentAudioInfo.delayFrequency;
+        float minRange = currentAudioInfo.minRange;
+        float maxRange = currentAudioInfo.maxRange;
+        bool stopAudioSource = currentAudioInfo.stopAudioSource;
+
+        if(currentDisplayedCharCount % delayFrequency == 0)
+        {
+            if (stopAudioSource)
+            {
+                AudioManager.instance.StopAudio();
+            }
+            AudioManager.instance.PlaySound(soundCLip, minRange, maxRange);
+        }
+    }
+    
+    private AudioClip RandomizeClipSelection()
+    {
+        int randomIndex = Random.Range(0, currentAudioInfo.dialogueSoundClips.Length);
+        return currentAudioInfo.dialogueSoundClips[randomIndex];
+    }
+
+    private void HideChoices()
+    {
+        continueText.SetActive(false);
+        choiceBoxes.SetActive(false);
+    }
 
     private void HandleTags(List<string> tags)
     {
@@ -200,6 +273,9 @@ public class DialogueManager : MonoBehaviour
                     break;
                 case ACTION_TAG:
                     ParseAction(tagValue);
+                    break;
+                case AUDIO_TAG:
+                    SetCurrentAudioInfo(tagValue);
                     break;
                 default:
                     Debug.LogError("Tag unhandled: " + tag);
@@ -347,7 +423,9 @@ public class DialogueManager : MonoBehaviour
 
         dialogueBox.SetActive(false);
         dialogueText.text = string.Empty;
-        dialogueText.color = Color.black;
+        dialogueText.color = Color.white;
+
+        SetCurrentAudioInfo(defaultAudioInfo.id);
     }
 
 

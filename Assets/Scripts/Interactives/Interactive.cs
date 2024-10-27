@@ -17,8 +17,8 @@ public class Interactive : MonoBehaviour
 
 
 
-    [Header("Interaction sound")]
-    [SerializeField] protected AudioClip soundClip;
+    //[Header("Dialogue sound")]
+    //[SerializeField] protected AudioClip soundClip;
 
     [Header("Ink JSON")]
     [SerializeField] protected TextAsset inkJSON;
@@ -40,7 +40,7 @@ public class Interactive : MonoBehaviour
 
     public virtual void PlaySound()
     {
-        SoundManager.instance.PlaySound(soundClip);
+        //SoundManager.instance.PlaySound(soundClip);
        // Debug.Log("Play sound from default scrip");
         // throw new System.NotImplementedException(); 
     }
