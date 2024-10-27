@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: roberto
   dialogueSoundClips:
-  - {fileID: 8300000, guid: 1eb0e31d49a264144b9325d65c2a90cf, type: 3}
-  - {fileID: 8300000, guid: 06f9d8f7256d50d43a3de2aa8018c5b7, type: 3}
-  - {fileID: 8300000, guid: 8d55ff4082f05444baee31e20a5bcd72, type: 3}
-  - {fileID: 8300000, guid: eee048259c4295444803a90e10fd62aa, type: 3}
-  - {fileID: 8300000, guid: 0906e61943d50294ba7a14c67e64b028, type: 3}
+  - {fileID: 8300000, guid: 666770f8451a9ba4f9d7c6022c999401, type: 3}
+  - {fileID: 8300000, guid: 0c7846001fa67f142966b57b1f299701, type: 3}
+  - {fileID: 8300000, guid: 04ca1b400c737354c8fd6b3772896ebe, type: 3}
+  - {fileID: 8300000, guid: e67362928aaf5964189a4bc32793723d, type: 3}
+  - {fileID: 8300000, guid: ca37994c63f4988498620257f1b62279, type: 3}
   stopAudioSource: 1
   delayFrequency: 4
   minRange: 1.94
